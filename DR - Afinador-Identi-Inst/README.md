@@ -1,13 +1,30 @@
-# Processamento Digital de Sinal 3º ano
+# Afinador e Reconhecimento de Instrumentos
 
-Este repositório contém o código-fonte para a aplicação em Python que identifica instrumentos musicais através do som e de um afinador em tempo real.
+## Descrição do Projeto
 
-## Como funciona a aplicação
+Este projeto tem como objetivo desenvolver uma aplicação que tem um amplificador e um reconhecedor de instrumentos musicais. 
 
-A aplicação utiliza técnicas de processamento digital de sinal para identificar instrumentos musicais através do som. Além disso, ela também possui um afinador em tempo real que permite que consiga afinar o seu instrumento enquanto toca.
+A primeira função tem como objetivo detetar a nota que o utilizador está a tocar e imprimir no terminal a mesma, para que o utilizador possa saber se esta a tocar a nota que pretende.
 
-## Autores
+A segunda funcionalidade tem como objetivo conseguir reconhecer qual o instrumento que esta a tocar e imprimir no terminal o nome do instrumento.
+Ambas as funcionalidades teram de ser usadas em tempo real.
 
-- Diogo, Nº 24011
-- Ricardo, Nº 22746
+## Funcionalidades Principais
 
+O reconhecedores de instrumentos musicais através do som captado pelo microfone do dispositivo, calcula o timbre e depois compara com uma lista de timbres de outros instrumentos e imprime no terminal o possivel instrumento musical.
+
+O afinador através do som captado pelo microfone do dispositivo, calcula a frequencia e compara com uma lista de notas musicais e depois imprime no terminal a nota correspondente.
+
+## Alunos
+
+Diogo Santos, Nº 24011
+
+Ricardo Almeida, Nº 22746
+
+## Professor
+
+João Francisco Almeida Soares
+
+## Requisitos Técnicos
+Python 3.7 ou superior.
+Bibliotecas específicas de processamento de áudio.
