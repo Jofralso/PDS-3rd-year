@@ -1,28 +1,20 @@
-# PDS-3rd-year
+# Cancelamento de Ruído em Processamento Digital de Sinal
 
+Este repositório é dedicado ao projeto de Cancelamento de Ruído por meio de técnicas avançadas de Processamento Digital de Sinal. O objetivo principal é melhorar a qualidade do sinal, minimizando interferências indesejadas através da aplicação de filtros de ruído.
 
-1. **Audio Equalizer:**
-   - Implement a real-time audio equalizer that allows users to adjust the frequency bands to enhance or attenuate specific frequencies in audio signals.
+## Objetivo
 
-2. **Speech Recognition System:**
-   - Develop a simple speech recognition system using techniques like Mel-Frequency Cepstral Coefficients (MFCC) and Hidden Markov Models (HMM) for basic command recognition.
+O foco central deste projeto é desenvolver e implementar algoritmos eficazes de cancelamento de ruído. Ao empregar abordagens avançadas de processamento digital de sinal, buscamos alcançar uma redução significativa do ruído presente nos sinais, resultando em uma melhoria perceptível na qualidade dos dados processados.
 
-3. **Image Compression:**
-   - Implement a basic image compression algorithm, such as JPEG or Wavelet-based compression, and analyze the trade-offs between compression ratio and image quality.
+## Tecnologias Utilizadas
 
-4. **Heart Rate Monitoring and Filtering:**
-   - Design a system that reads a heart rate signal and filters out noise using digital signal processing techniques. Visualize the heart rate over time.
+O projeto é desenvolvido em Python, aproveitando bibliotecas especializadas como NumPy, SciPy e Matplotlib. Essas ferramentas fornecem uma base sólida para manipulação eficiente de dados, implementação de algoritmos de processamento de sinal e visualização de resultados.
 
-5. **FIR/IIR Filter Design:**
-   - Have students design and implement Finite Impulse Response (FIR) or Infinite Impulse Response (IIR) filters for different specifications. They can compare the performance of these filters in terms of frequency response and phase characteristics.
+## Contribuições
 
-6. **Digital Audio Effects:**
-   - Implement digital audio effects such as reverb, chorus, or flanger. Allow users to apply these effects to audio signals and analyze the impact.
+Contribuições são incentivadas! Se você tem sugestões, identificou problemas ou deseja contribuir de alguma forma, sinta-se à vontade para participar. Este projeto está aberto a colaborações que visem aprimorar as técnicas de cancelamento de ruído.
 
-7. **Biomedical Signal Processing:**
-   - Work on processing biomedical signals like ECG or EEG. Implement filtering, feature extraction, and analysis techniques to identify patterns or anomalies in the signals.
+## Licença
 
-8. **Adaptive Noise Cancellation:**
-   - Develop a system that uses adaptive filters to cancel noise from a corrupted signal, such as removing noise from an audio recording or a biomedical signal.
-
+Este projeto é distribuído sob a licença [MIT](LICENSE), proporcionando flexibilidade para utilização e modificação do código-fonte. Sinta-se à vontade para explorar, adaptar e incorporar estas técnicas em seus próprios projetos.
 
