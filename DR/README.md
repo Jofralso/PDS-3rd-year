@@ -73,6 +73,5 @@
 24. **Pulse Oximetry Signal Processing:**
     - Work on processing pulse oximetry signals to extract heart rate and oxygen saturation information. Analyze the challenges and techniques involved in accurate signal processing.
 
-25. **Gesture-Controlled Robotic Arm:**
-    - Implement a gesture-controlled robotic arm using sensors (like accelerometers or gyroscopes) to capture gestures. Process the signals to control the movements of the robotic arm.
+
 
