@@ -25,20 +25,11 @@ Este projeto tem como objetivo desenvolver um Modificador de Voz, uma aplicaçã
 
 ## Instruções de Uso
 
-1. Faça o download e instale a aplicação.
-2. Abra a aplicação e escolha o arquivo de áudio desejado.
-3. Utilize as opções de controle para ajustar o tom, a velocidade e/ou identificar o gênero conforme suas preferências.
-4. Salve o áudio modificado ou compartilhe diretamente a partir da aplicação.
+1. Abra a aplicação e escolha o ficheiro de áudio desejado.
+2. Utilize as opções de controle para ajustar o tom, a velocidade e/ou identificar o gênero conforme suas preferências.
+3. Salve o áudio modificado.
 
 ## Requisitos Técnicos
 
 - Python 3.7 ou superior
-- Bibliotecas específicas de processamento de áudio (detalhadas no arquivo `requirements.txt`)
-
-## Licença
-
-Este projeto é distribuído sob a licença [MIT](LICENSE). Sinta-se à vontade para utilizar, modificar e distribuir conforme necessário.
-
----
-
-**Nota:** Este documento README fornece uma visão geral do projeto. Para informações mais detalhadas sobre a implementação, consulte a documentação técnica no diretório `docs`.
+- Bibliotecas específicas de processamento de áudio
