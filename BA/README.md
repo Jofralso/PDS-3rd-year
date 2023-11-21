@@ -12,15 +12,7 @@ O projeto é desenvolvido em Python, aproveitando bibliotecas especializadas com
 
 ## Membros do Grupo
 
-### Bruno Alves
-
-O Bruno é um entusiasta do processamento de sinais, com uma sólida formação em engenharia elétrica. Sua paixão por encontrar soluções inovadoras para desafios complexos no campo do processamento digital de sinais é uma peça fundamental para o sucesso do nosso projeto.
-
-### António Dias
-
-O António traz uma rica experiência em programação e um profundo conhecimento em algoritmos de processamento de sinais. Sua habilidade em transformar teoria em implementações práticas é um dos pilares que impulsiona nosso grupo na busca pela eficácia e excelência.
-
-Juntos, procuramos aprimorar técnicas de cancelamento de ruído, aplicando conhecimentos avançados em processamento digital de sinal. Estamos comprometidos em criar soluções inovadoras que impactem positivamente a qualidade de sinais em diversas aplicações.
+O grupo é constituido pelo Bruno Alves (nº 19679) e António Dias (nº 22828), alunos do 3º ano do curso de Engenharia Informática e Telecomunicações na Escola Superior de Técnologia e Gestão de Lamego.
 
 ## Contribuições
 
