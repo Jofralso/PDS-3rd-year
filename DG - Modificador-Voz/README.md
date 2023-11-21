@@ -1,78 +1,44 @@
-# PDS-3rd-year
+# Modificador de Voz
 
+## Descrição do Projeto
 
-1. **Audio Equalizer:**
-   - Implement a real-time audio equalizer that allows users to adjust the frequency bands to enhance or attenuate specific frequencies in audio signals.
+Este projeto tem como objetivo desenvolver um Modificador de Voz, uma aplicação que permitirá alterar características da voz, tais como tom (grave e agudo), velocidade de fala, e até mesmo identificar o gênero sexual baseado na voz. A aplicação será uma ferramenta versátil e intuitiva para manipulação de áudio, proporcionando uma experiência única aos utilizadores.
 
-2. **Speech Recognition System:**
-   - Develop a simple speech recognition system using techniques like Mel-Frequency Cepstral Coefficients (MFCC) and Hidden Markov Models (HMM) for basic command recognition.
+## Funcionalidades Principais
 
-3. **Image Compression:**
-   - Implement a basic image compression algorithm, such as JPEG or Wavelet-based compression, and analyze the trade-offs between compression ratio and image quality.
+1. **Alteração de Tom (Grave e Agudo):**
+   - A aplicação permitirá aos utilizadores modificar o tom da voz, proporcionando a capacidade de ajustar entre um registro grave e agudo. Isso possibilitará a personalização da voz conforme a preferência do usuário.
 
-4. **Heart Rate Monitoring and Filtering:**
-   - Design a system that reads a heart rate signal and filters out noise using digital signal processing techniques. Visualize the heart rate over time.
+2. **Modificação de Velocidade de Voz:**
+   - Os utilizadores terão controle total sobre a velocidade da fala, permitindo acelerar ou desacelerar a reprodução do áudio. Essa funcionalidade pode ser útil para diversas finalidades, como reprodução mais rápida para transcrições ou mais lenta para compreensão detalhada.
 
-5. **FIR/IIR Filter Design:**
-   - Have students design and implement Finite Impulse Response (FIR) or Infinite Impulse Response (IIR) filters for different specifications. They can compare the performance of these filters in terms of frequency response and phase characteristics.
+3. **Identificação de Gênero pela Voz:**
+   - Utilizando técnicas de processamento de áudio avançadas, a aplicação será capaz de identificar o gênero sexual com base na voz do utilizador. Essa funcionalidade pode ser útil para diversos contextos, desde brincadeiras divertidas até aplicações mais sérias, como reconhecimento de gênero em sistemas de segurança.
 
-6. **Digital Audio Effects:**
-   - Implement digital audio effects such as reverb, chorus, or flanger. Allow users to apply these effects to audio signals and analyze the impact.
+## Colaboradores
 
-7. **Biomedical Signal Processing:**
-   - Work on processing biomedical signals like ECG or EEG. Implement filtering, feature extraction, and analysis techniques to identify patterns or anomalies in the signals.
+- **Diogo Oliveira:**
+  - Desenvolvedor principal responsável pela implementação das funcionalidades do Modificador de Voz. Especialista em processamento de áudio e algoritmos de modificação vocal.
 
-8. **Adaptive Noise Cancellation:**
-   - Develop a system that uses adaptive filters to cancel noise from a corrupted signal, such as removing noise from an audio recording or a biomedical signal.
+- **Guilherme Castro:**
+  - Colaborador especializado em design de interface do usuário (UI) e experiência do usuário (UX). Responsável por criar uma interface intuitiva e amigável para a aplicação, garantindo uma experiência fluida para os usuários.
 
-9. **Spectral Analysis:**
-   - Implement spectral analysis techniques like the Short-Time Fourier Transform (STFT) or the Wavelet Transform to analyze signals in the time-frequency domain.
+## Instruções de Uso
 
-10. **Digital Filter Bank:**
-    - Design and implement a digital filter bank for signal decomposition or analysis. This could be useful in applications such as audio processing or communication systems.
+1. Faça o download e instale a aplicação.
+2. Abra a aplicação e escolha o arquivo de áudio desejado.
+3. Utilize as opções de controle para ajustar o tom, a velocidade e/ou identificar o gênero conforme suas preferências.
+4. Salve o áudio modificado ou compartilhe diretamente a partir da aplicação.
 
-11. **Echo Cancellation:**
-    - Develop an echo cancellation system to eliminate echoes from audio signals, which is particularly useful in telecommunication applications.
+## Requisitos Técnicos
 
-12. **Gesture Recognition using Accelerometer Data:**
-    - Use accelerometer data from a smartphone or another sensor to recognize hand gestures. Apply signal processing techniques to extract features and classify gestures.
+- Python 3.7 ou superior
+- Bibliotecas específicas de processamento de áudio (detalhadas no arquivo `requirements.txt`)
 
-13. **Image Processing for Object Recognition:**
-    - Develop an image processing system to recognize objects in images using techniques like edge detection, feature extraction, and pattern matching.
+## Licença
 
-14. **Pitch Detection and Correction:**
-    - Create a pitch detection algorithm for identifying the pitch of musical notes in an audio signal. Extend the project to include pitch correction for musical applications.
+Este projeto é distribuído sob a licença [MIT](LICENSE). Sinta-se à vontade para utilizar, modificar e distribuir conforme necessário.
 
-15. **Biometric Authentication System:**
-    - Build a biometric authentication system using signal processing techniques on fingerprint or iris data. Explore methods like Fourier analysis for feature extraction.
+---
 
-16. **Digital Watermarking:**
-    - Implement a digital watermarking algorithm to embed information in images or audio signals without perceptible degradation. Evaluate the robustness and invisibility of the watermark.
-
-17. **Digital Radio Receiver:**
-    - Design a simple digital radio receiver that can tune in to different frequencies and decode radio signals. Explore modulation and demodulation techniques.
-
-18. **Voice Activity Detection (VAD):**
-    - Develop a VAD system that can distinguish between speech and non-speech segments in an audio signal. This is useful in various applications, including speech processing and telecommunications.
-
-19. **Dynamic Range Compression for Audio:**
-    - Implement a dynamic range compression algorithm to automatically adjust the loudness of audio signals. Analyze the impact on perceived audio quality.
-
-20. **Music Genre Classification:**
-    - Build a system that classifies music genres based on audio features. Use machine learning techniques in conjunction with signal processing for accurate classification.
-
-21. **Real-time Signal Processing on Arduino/Raspberry Pi:**
-    - Implement a real-time signal processing application on a low-cost microcontroller platform like Arduino or Raspberry Pi. This could be an audio processing or image processing project.
-
-22. **Channel Equalization in Communication Systems:**
-    - Develop a channel equalization algorithm to compensate for distortion and interference in communication channels. Evaluate the performance under different channel conditions.
-
-23. **Non-Invasive Blood Glucose Monitoring:**
-    - Investigate the feasibility of non-invasive blood glucose monitoring using signal processing techniques. Explore the correlation between physiological signals and blood glucose levels.
-
-24. **Pulse Oximetry Signal Processing:**
-    - Work on processing pulse oximetry signals to extract heart rate and oxygen saturation information. Analyze the challenges and techniques involved in accurate signal processing.
-
-25. **Gesture-Controlled Robotic Arm:**
-    - Implement a gesture-controlled robotic arm using sensors (like accelerometers or gyroscopes) to capture gestures. Process the signals to control the movements of the robotic arm.
-
+**Nota:** Este documento README fornece uma visão geral do projeto. Para informações mais detalhadas sobre a implementação, consulte a documentação técnica no diretório `docs`.
