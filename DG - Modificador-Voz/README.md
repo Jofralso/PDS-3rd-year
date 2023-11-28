@@ -18,10 +18,9 @@ Este projeto tem como objetivo desenvolver um Modificador de Voz, uma aplicaçã
 ## Colaboradores
 
 - **Diogo Oliveira:**
-  - Desenvolvedor principal responsável pela implementação das funcionalidades do Modificador de Voz. Especialista em processamento de áudio e algoritmos de modificação vocal.
 
 - **Guilherme Castro:**
-  - Colaborador especializado em design de interface do usuário (UI) e experiência do usuário (UX). Responsável por criar uma interface intuitiva e amigável para a aplicação, garantindo uma experiência fluida para os usuários.
+
 
 ## Instruções de Uso
 
