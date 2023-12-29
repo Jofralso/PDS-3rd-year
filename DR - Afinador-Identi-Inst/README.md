@@ -1,11 +1,7 @@
 # Afinador e Reconhecimento de Instrumentos
 
-## Descrição do Projeto
+## Introdução
 O projeto tem como objetivo desenvolver uma aplicação que tem como função ser um afinador, dependendo do instrumentos musicais escolhido. 
-
-
-A segunda funcionalidade tem como objetivo conseguir reconhecer qual o instrumento que esta a tocar e imprimir no terminal o nome do instrumento.
-Ambas as funcionalidades teram de ser usadas em tempo real.
 
 ## Funcionalidades Principais
 
