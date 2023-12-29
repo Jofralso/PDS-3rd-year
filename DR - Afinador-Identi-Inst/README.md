@@ -64,6 +64,7 @@ Vamos agora mostrar e descrever como funciona a aplicação, as respetivas bibli
 O afinador através do som captado pelo microfone do dispositivo, calcula a frequencia e compara com uma lista de notas musicais e depois imprime no terminal a nota correspondente.
 
 ![DR - Afinador-Identi-Inst/Grafico.png]
+!https://www.google.pt/url?sa=i&url=https%3A%2F%2Fwww.autismoemfamilia.com.br%2F2023%2F04%2Fsera-que-o-pocoyo-e-autista-veja.html&psig=AOvVaw1zxO_7GuYHAaJSo00Ftve4&ust=1703973235708000&source=images&cd=vfe&opi=89978449&ved=0CA8QjRxqFwoTCPD3hJDRtYMDFQAAAAAdAAAAABAD
 
 ## Referências
 
