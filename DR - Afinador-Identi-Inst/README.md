@@ -29,10 +29,10 @@ Foi-nos proposto realizar um projeto que englobasse uma área de Processamento D
 ## Requisitos Técnicos
 Python 3.7 ou superior.
 
-Bibliotecas: tkinter, matplotlib, pyaudio, numpy, scipy e threading
+Bibliotecas: tkinter, matplotlib, pyaudio, numpy, scipy e threading.
 
 ## Python
-Para desenvolver a aplicação utilizmos a ferramenta IDLE do Python.
+Para desenvolver a aplicação utilizamos a ferramenta IDLE do Python.
 
 O Python é uma linguagem de programação de alto nível, interpretada, orientada a objetos e de propósito geral. Foi criada por Guido van Rossum e lançada em 1991. O Python é uma linguagem popular para desenvolvimento web, análise de dados, automação, inteligência artificial e outras aplicações. O Python é conhecido pela sua sintaxe clara e concisa, o que torna o código fácil de ler e escrever. Além disso, o Python tem uma grande comunidade de desenvolvedores que contribuem com bibliotecas e ferramentas para aprimorar a linguagem.
 
