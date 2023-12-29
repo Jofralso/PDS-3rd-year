@@ -52,6 +52,7 @@ Para desenvolver a aplicação, utilizamos diversas bibliotecas que vamos agora 
 
 - __scipy.signal.butter__: É uma função da biblioteca scipy.signal que é usada para projetar filtros digitais. É usada para criar filtros digitais que podem ser usados para filtrar sinais de áudio, sinais de vídeo, entre outros.
 
+
 - __scipy.signal.lfilter__: É uma função da biblioteca scipy.signal que é usada para filtrar sinais digitais. É usada para aplicar um filtro digital a um sinal digital. A função lfilter é muito útil para filtrar sinais de áudio, sinais de vídeo, entre outros.
 
 - __threading__: É uma biblioteca que fornece suporte para threads em Python. É usada para criar e gerir threads no Python. A biblioteca threading é muito útil para criar aplicações que precisam executar várias tarefas simultaneamente.
@@ -62,7 +63,7 @@ Vamos agora mostrar e descrever como funciona a aplicação, as respetivas bibli
 
 O afinador através do som captado pelo microfone do dispositivo, calcula a frequencia e compara com uma lista de notas musicais e depois imprime no terminal a nota correspondente.
 
-!DR - Afinador-Identi-Inst/Grafico.png
+![DR - Afinador-Identi-Inst/Grafico.png]
 
 ## Referências
 
