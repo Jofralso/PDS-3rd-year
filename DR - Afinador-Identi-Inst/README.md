@@ -62,8 +62,7 @@ Vamos agora mostrar e descrever como funciona a aplicação, as respetivas bibli
 
 O afinador através do som captado pelo microfone do dispositivo, calcula a frequencia e compara com uma lista de notas musicais e depois imprime no terminal a nota correspondente.
 
-DR - Afinador-Identi-Inst/Grafico.png
-!Menu da aplicação
+!DR - Afinador-Identi-Inst/Grafico.png
 
 ## Referências
 
