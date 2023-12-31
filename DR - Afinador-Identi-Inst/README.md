@@ -71,11 +71,11 @@ Para desenvolver a aplicação, utilizamos diversas bibliotecas que vamos agora 
 
 ## Funcionamento
 
-Vamos agora mostrar e descrever como funciona a aplicação, as respetivas bibliotecas usadas e as funçoes criadas.
+Vamos agora mostrar e descrever como funciona a aplicação e as funções criadas.
 
 O afinador através do som captado pelo microfone do dispositivo, calcula a frequencia e compara com uma lista de notas musicais e depois imprime no terminal a nota correspondente.
 
-![Menu da aplicação](https://github.com/Jofralso/PDS-3rd-year/blob/DR/DR%20-%20Afinador-Identi-Inst/Grafico.png)
+![Gráfico de frequências (com e sem filtro)](https://github.com/Jofralso/PDS-3rd-year/blob/DR/DR%20-%20Afinador-Identi-Inst/Grafico.png)
 
 ## Referências
 
