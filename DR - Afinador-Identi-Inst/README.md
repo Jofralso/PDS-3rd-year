@@ -30,12 +30,18 @@ Foi-nos proposto realizar um projeto que englobasse uma área de Processamento D
 Python 3.7 ou superior.
 
 Bibliotecas: 
--tkinter;
--matplotlib;
--pyaudio;
--numpy;
--scipy;
--threading.
+
+- tkinter;
+
+- matplotlib;
+
+- pyaudio;
+
+- numpy;
+
+- scipy;
+
+- threading.
 
 ## Python
 Para desenvolver a aplicação utilizamos a ferramenta IDLE do Python.
