@@ -79,15 +79,15 @@ Para que o código do programa fique mais organizado e não exista repetição d
 
 - __butterBandpass()__: Define uma função que implementa um filtro passa-banda Butterworth. Aceita quatro argumentos: lowcut, highcut, fs e order.
 
-  lowcut: A frequência de corte inferior do filtro em Hz.
+    lowcut: A frequência de corte inferior do filtro em Hz.
 
-  highcut: A frequência de corte superior do filtro em Hz.
+    highcut: A frequência de corte superior do filtro em Hz.
 
-  fs: A taxa de amostragem do sinal em Hz.
+    fs: A taxa de amostragem do sinal em Hz.
 
-  order: A ordem do filtro Butterworth. 
+    order: A ordem do filtro Butterworth. 
 
-A função retorna dois arrays NumPy, b e a, que representam os coeficientes do filtro. Esses coeficientes podem ser usados para filtrar um sinal usando a função lfilter do módulo scipy.signal.
+    A função retorna dois arrays NumPy, b e a, que representam os coeficientes do filtro. Esses coeficientes podem ser usados para filtrar um sinal usando a          função   lfilter do módulo scipy.signal.
 
 - __butterBandpassFilter()__: Define uma função que implementa um filtro passa-banda Butterworth de ordem para um sinal de entrada com frequências de corte  e taxa de amostragem. O filtro é implementado usando a função butterBandpass() que retorna os coeficientes do filtro. Em seguida, a função lfilter() é usada para aplicar o filtro ao sinal de entrada usando os coeficientes do filtro. O sinal filtrado é retornado pela função.
 
