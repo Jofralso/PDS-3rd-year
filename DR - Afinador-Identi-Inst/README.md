@@ -69,6 +69,21 @@ Para desenvolver a aplicação, utilizamos diversas bibliotecas que vamos agora 
 
 - __threading__: É uma biblioteca que fornece suporte para threads em Python. É usada para criar e gerir threads no Python. A biblioteca threading é muito útil para criar aplicações que precisam executar várias tarefas simultaneamente.
 
+## Funções 
+
+Para que o código do programa fique mais organizado e não exista repetição de codigo, decidimos criar algumas funções que vamos agora explicar como funcionam.
+
+- __executarComoThread()__: Define a animação do gráfico no Python. Cria uma animação do gráfico que é atualizada a cada 500 milissegundos. A função atualizarGrafico() é executada a cada atualização e é responsável por atualizar o gráfico.
+
+- __atualizarGrafico(i)__: Define uma função que recebe um parâmetro i. A função atualiza os valores do eixo X e plota um gráfico com valores das frequências. O gráfico é composto por duas linhas, uma vermelha e outra azul, que representam as frequências sem filtro e com filtro, respectivamente. O gráfico também possui um título, rótulos para os eixos X e Y e uma legenda. O limite do eixo Y é definido de acordo com a opção do instrumento escolhido. Além disso, a função adiciona os valores no gráfico.
+
+- __butterBandpass()__: Define uma função que implementa um filtro passa-banda Butterworth. Aceita quatro argumentos: lowcut, highcut, fs e order.
+lowcut: A frequência de corte inferior do filtro em Hz.
+highcut: A frequência de corte superior do filtro em Hz.
+fs: A taxa de amostragem do sinal em Hz.
+order: A ordem do filtro Butterworth. 
+A função retorna dois arrays NumPy, b e a, que representam os coeficientes do filtro. Esses coeficientes podem ser usados para filtrar um sinal usando a função lfilter do módulo scipy.signal.
+
 ## Funcionamento
 
 Vamos agora mostrar e descrever como funciona a aplicação e as funções criadas.
