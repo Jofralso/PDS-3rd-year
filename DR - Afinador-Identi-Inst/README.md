@@ -75,7 +75,7 @@ Para que o código do programa fique mais organizado e não exista repetição d
 
 - __executarComoThread()__: Define a animação do gráfico no Python. Cria uma animação do gráfico que é atualizada a cada 500 milissegundos. A função atualizarGrafico() é executada a cada atualização e é responsável por atualizar o gráfico.
 
-- __atualizarGrafico(i)__: Define uma função que recebe um parâmetro i. A função atualiza os valores do eixo X e plota um gráfico com valores das frequências. O gráfico é composto por duas linhas, uma vermelha e outra azul, que representam as frequências sem filtro e com filtro, respectivamente. O gráfico também possui um título, rótulos para os eixos X e Y e uma legenda. O limite do eixo Y é definido de acordo com a opção do instrumento escolhido. Além disso, a função adiciona os valores no gráfico.
+- __atualizarGrafico()__: Define uma função que recebe um parâmetro i. A função atualiza os valores do eixo X e plota um gráfico com valores das frequências. O gráfico é composto por duas linhas, uma vermelha e outra azul, que representam as frequências sem filtro e com filtro, respectivamente. O gráfico também possui um título, rótulos para os eixos X e Y e uma legenda. O limite do eixo Y é definido de acordo com a opção do instrumento escolhido. Além disso, a função adiciona os valores no gráfico.
 
 - __butterBandpass()__: Define uma função que implementa um filtro passa-banda Butterworth. Aceita quatro argumentos: lowcut, highcut, fs e order.
 
@@ -88,6 +88,8 @@ Para que o código do programa fique mais organizado e não exista repetição d
   order: A ordem do filtro Butterworth. 
 
 A função retorna dois arrays NumPy, b e a, que representam os coeficientes do filtro. Esses coeficientes podem ser usados para filtrar um sinal usando a função lfilter do módulo scipy.signal.
+
+- __butterBandpassFilter()__: Define uma função que implementa um filtro passa-banda Butterworth de ordem para um sinal de entrada com frequências de corte  e taxa de amostragem. O filtro é implementado usando a função butterBandpass() que retorna os coeficientes do filtro. Em seguida, a função lfilter() é usada para aplicar o filtro ao sinal de entrada usando os coeficientes do filtro. O sinal filtrado é retornado pela função.
 
 ## Funcionamento
 
