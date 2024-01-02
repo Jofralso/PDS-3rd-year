@@ -91,6 +91,12 @@ Para que o código do programa fique mais organizado e não exista repetição d
 
 - __butterBandpassFilter()__: Define uma função que implementa um filtro passa-banda Butterworth de ordem para um sinal de entrada com frequências de corte  e taxa de amostragem. O filtro é implementado usando a função butterBandpass() que retorna os coeficientes do filtro. Em seguida, a função lfilter() é usada para aplicar o filtro ao sinal de entrada usando os coeficientes do filtro. O sinal filtrado é retornado pela função.
 
+- __buscarBlocoNotas()__: Define uma função que recebe um argumento "option" e define a variável global "blocoNotas" com base no valor de "option".
+
+- __introduzirNotas()__: Define uma função que recebe um número variável de argumentos. A função tem como objetivo buscar um bloco de notas, limpar o dicionário "notas", ler o bloco de notas e armazená-las no dicionário "notas". Em seguida, a função procura o menor e o maior valor do dicionário "notas" e os armazena nas variáveis globais "menorValor" e "maiorValor", respectivamente. Por fim, a função imprime o menor e o maior valor do dicionário "notas" e verifica se o dicionário está correto, imprimindo as chaves e os valores do dicionário "notas".
+
+- __ouvir()__: Define uma função
+
 ## Funcionamento
 
 Vamos agora mostrar e descrever como funciona a aplicação e as funções criadas.
