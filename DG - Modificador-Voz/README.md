@@ -12,8 +12,8 @@ Este projeto tem como objetivo desenvolver um Modificador de Voz, uma aplicaçã
 2. **Modificação de Velocidade de Voz:**
    - Os utilizadores terão controle total sobre a velocidade da fala, permitindo acelerar ou desacelerar a reprodução do áudio. Essa funcionalidade pode ser útil para diversas finalidades, como reprodução mais rápida para transcrições ou mais lenta para compreensão detalhada.
 
-3. **Alteração de Gênero pela Voz:**
-   - Utilizando técnicas de processamento de áudio avançadas, a aplicação será capaz de identificar o gênero sexual com base na voz do utilizador. Essa funcionalidade pode ser útil para diversos contextos, desde brincadeiras divertidas até aplicações mais sérias, como reconhecimento de gênero em sistemas de segurança.
+3. **Alteração da Voz pelo Género:**
+   - A aplicação será capaz de alterar a voz do áudio com base no gênero sexual selecionado. Essa funcionalidade pode ser útil para diversos contextos, desde brincadeiras divertidas até aplicações mais sérias.
 
 ## Colaboradores
 
