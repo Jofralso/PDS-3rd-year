@@ -38,7 +38,7 @@ O nosso programa recorre a várias bibliotecas para chegar ao seu estado final, 
    - Esta biblioteca foi utilizada para a manipulação de áudios, incluindo o carregamento, processamento e exportação de ficheiros de áudio.
 
 3. **Numpy:**
-   - Utilizamos esta biblioteca para realizar operações numéricas eficientes sobre as amostras de áudio, utilizado nas funções de alteração de áudio como, funções de alterar tom e velocidade do áudio e na função stretch.
+   - Utilizamos esta biblioteca para realizar operações numéricas eficientes sobre as amostras de áudio, utilizado nas funções de alteração de áudio como funções de alterar tom e velocidade do áudio e na função stretch.
 
 4. **OS:**
    - Esta biblioteca fornece uma interface para interagir com o sistema operativo, na prática precisamos de implementar esta biblioteca para a opção de pré-visualizar o áudio, onde criamos um ficheiro temporário e depois remover o ficheiro com a função “os.remove()”.
@@ -48,7 +48,7 @@ O nosso programa recorre a várias bibliotecas para chegar ao seu estado final, 
 
 ## Funções
 
-Este programa é constituído por várias funções, nelas estão implementadas as alterações do áudio face as opções que o utilizador selecionar, como funções para alterar a velocidade e o tom, manipulação e reprodução de áudio, importação e exportação de áudio. A seguir é explicado como funciona cada uma das funções do nosso programa.
+Este programa é constituído por várias funções, nelas são implementadas as alterações do áudio face as opções que o utilizador selecionar, como funções para alterar a velocidade e o tom, manipulação e reprodução de áudio, importação e exportação de áudio. A seguir é explicado como funciona cada uma das funções do nosso programa.
 
 **alterar_audio:**
    -   audio = AudioSegment.from_file(input_path): Esta linha usa a classe Pydub AudioSegmentpara carregar um ficheiro de áudio do ficheiro input_path.
