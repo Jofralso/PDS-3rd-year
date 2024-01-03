@@ -156,7 +156,11 @@ Depois é indicado se a corda esta afinada ou não, dependendo da nota musical c
 
 ![Instrumento desafinado](https://github.com/Jofralso/PDS-3rd-year/blob/DR/DR%20-%20Afinador-Identi-Inst/frequencia%20errada.png)
 
+Se a seta indicar para a esquerda, significa que a nota se encontra à esquerda, se a seta indicar para a direita, significa que a nota se encontra à direita.
+
 ![Instrumento afinado](https://github.com/Jofralso/PDS-3rd-year/blob/DR/DR%20-%20Afinador-Identi-Inst/frequencia%20correta.png)
+
+Se a frequência da nota musical for a correta, existe uma indicação com a palavra "OK" a cor verde.
 
 ## Referências
 
