@@ -129,6 +129,8 @@ A escolha da ordem $n$ influencia diretamente na rapidez da queda da resposta de
 
 Os cálculos para projetar o filtro envolvem determinar os coeficientes do polinómio na função de transferência com base na ordem desejada e na frequência de corte. Para ordens mais altas, isso pode envolver raízes complexas.
 
+O filtro Butterworth é o único filtro que mantém o mesmo formato para ordens mais elevadas enquanto outras variedades de filtros possuem formatos diferentes para ordens mais elevadas.
+
 ![Gráfico com varias ordens do filtro Butterworth](https://github.com/Jofralso/PDS-3rd-year/blob/DR/DR%20-%20Afinador-Identi-Inst/filtroButterworth).
 
 ## Funcionamento
