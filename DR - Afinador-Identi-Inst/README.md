@@ -100,6 +100,29 @@ Para que o código do programa fique mais organizado e não exista repetição d
 - __ouvir()__: Define uma função que durante um intervalo de tempo recolhe o que é captado pelo microfone e guarda num array. Após isso, a array é convertida para uma array numpy do tipo int16, é aplicado o filtro passa-banda e são calculadas as frequências com e sem filtro.
 Depois são executadas algumas operações com base no valor de "selected_option". Se "selected_option" for igual a "Notas Gerais", o código itera sobre o dicionário "notas" e encontra o valor mais próximo da frequência. Se "selected_option" não for igual a "Notas Gerais", o código itera sobre o dicionário "notas" e encontra a nota que corresponde à frequencia fornecida. Se a frequência captada for menor que a frequência exata da nota, a variável "simbolo" é definida como "--->" e a variável "cor" é definida como "red". Se a frequência captada for maior que a frequência exata da nota, a variável "simbolo" é definida como "<---" e a variável "cor" é definida como "red". Caso contrário, a variável "simbolo" é definida como "OK" e a variável "cor" é definida como "green".
 
+## Filtro Butterworth
+
+Para a aplicação funcionar de forma eficiente, utilizamos o filtro Butterworth.
+
+O filtro Butterworth é um tipo de filtro usado em processamento de sinal e análise de sistemas, conhecido pela sua resposta de frequência constante na faixa permitida, sem variações bruscas. A principal característica é uma transição suave entre a faixa de frequência permitida e a atenuada, sacrificando ligeiramente a distorção de fase.
+
+O filtro é caracterizado pela sua ordem (n), que determina a rapidez da transição. A escolha da frequência de corte (onde ocorre a transição) e da ordem é feita conforme os requisitos do sistema.
+
+Para calcular um filtro Butterworth, são necessárias operações matemáticas, especialmente aquelas relacionadas à função de transferência do filtro. A função de transferência é expressa em termos de polinómios e raízes complexas. A frequência de corte e a ordem do filtro são utilizadas nestes cálculos para projetar o filtro Butterworth desejado.
+
+Este tipo de filtro é comum em aplicações como filtragem de áudio e processamento de imagens, sendo escolhido quando se pretende uma resposta de frequência suave e previsível
+
+A função de transferência H(s) de um filtro Butterworth de ordem n pode ser expressa como:
+
+$$
+\[ H(s) = \frac{1}{\sqrt{1 + \left(\frac{s}{\omega_c}\right)^{2n}}} \]
+$$
+
+onde:
+- \( s \) é a variável complexa,
+- \( \omega_c \) é a frequência de corte,
+- \( n \) é a ordem do filtro.
+
 ## Funcionamento
 
 Vamos agora mostrar e descrever como funciona a aplicação e as funções criadas.
