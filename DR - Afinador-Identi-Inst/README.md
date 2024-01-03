@@ -119,9 +119,9 @@ $$
 $$
 
 onde:
-- \( s \) é a variável complexa,
-- \( \omega_c \) é a frequência de corte,
-- \( n \) é a ordem do filtro.
+- $\( s \)$ é a variável complexa,
+- $\( \omega_c \)$ é a frequência de corte,
+- $\( n \)$ é a ordem do filtro.
 
 ## Funcionamento
 
