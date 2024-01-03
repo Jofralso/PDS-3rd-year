@@ -26,7 +26,7 @@ Este projeto tem como objetivo desenvolver um Modificador de Voz, uma aplicaçã
 
 1. Abra a aplicação e escolha o ficheiro de áudio desejado.
 2. Utilize as opções de controle para ajustar o tom, a velocidade e/ou alterar o gênero conforme suas preferências.
-3. Salve o áudio modificado.
+3. Pré-Visualize ou salve o áudio modificado.
 
 ## Requisitos Técnicos
 
