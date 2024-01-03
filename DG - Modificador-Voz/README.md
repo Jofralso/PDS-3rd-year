@@ -47,9 +47,10 @@ O nosso programa recorre a várias bibliotecas para chegar ao seu estado final, 
    - Esta biblioteca basicamente server para reproduzir o áudio escolhido e modificado pelo utilizador ao clicar no botão “Pré-visualizar”, isto com a função “play(audio)”.
 
 ## Funções
-A seguir iremos explicar como funciona as funções do nosso programa
 
-alterar_audio:
+Este programa é constituído por várias funções, nelas estão implementadas as alterações do áudio face as opções que o utilizador selecionar, como funções para alterar a velocidade e o tom, manipulação e reprodução de áudio, importação e exportação de áudio. A seguir é explicado como funciona cada uma das funções do nosso programa.
+
+**alterar_audio:**
    -   audio = AudioSegment.from_file(input_path): Esta linha usa a classe Pydub AudioSegmentpara carregar um ficheiro de áudio do ficheiro input_path.
    -   sound_array = np.array(audio.get_array_of_samples()): Os dados de áudio são convertidos em um array NumPy usando o get_array_of_samplesmétodo. Esta matriz representa a onda sonora.
    -   pitch_and_speed_shifted_array = pitchshift(sound_array, pitch_factor, speed_factor, window_size, overlap): A pitchshiftfunção é chamada com a matriz de som e parâmetros de afinação, velocidade, tamanho da janela e sobreposição especificados. Esta função aplica mudança de tom e mudança de velocidade ao conjunto de áudio.
@@ -59,7 +60,7 @@ alterar_audio:
    Esta função alterar_audio é a principal responsável por carregar um fiheiro de áudio, aplicar mudança de tom e mudança de velocidade, criar um novo segmento de áudio modificado e exportar o resultado para um caminho de saída especificado.
 
 
-pitchshift:
+**pitchshift:**
    -   snd_array: A matriz de áudio de entrada (matriz NumPy) que representa a onda sonora.
 n: O fator de afinação, indica o número de semitons para mudar a afinação. Os valores positivos aumentam o tom e valores negativos diminuem o tom.
 speed_factor: Um fator para ajustar a velocidade do áudio.
@@ -71,7 +72,7 @@ overlap: A quantidade de sobreposição entre janelas de análise consecutivas.
    A função combina operações de mudança de tom e mudança de velocidade para modificar a matriz de áudio de entrada com base no fator de tom, fator de velocidade, tamanho da janela e sobreposição especificados. Ele utiliza a stretchfunção de alongamento do tempo e a speedxfunção de ajuste de velocidade.
 
 
-stretch:
+**stretch:**
    -   sound_array: A matriz de áudio de entrada (matriz NumPy) que representa a onda sonora.
 f: O fator de estiramento, determinando quanto esticar ou comprimir o áudio no tempo.
 window_size: O tamanho da janela de análise usada para processar o áudio.
@@ -86,7 +87,7 @@ hanning_window = np.hanning(window_size): Cria uma janela Hanning do tamanho esp
    A função implementa o algoritmo de codificador de fase para áudio com alongamento de tempo. Envolve transformada de Fourier, manipulação de fase e acumulação de segmentos refasados ​​para alcançar o efeito de alongamento de tempo desejado.
 
 
-speedx:
+**speedx:**
    -   sound_array: A matriz de áudio de entrada (matriz NumPy) que representa a onda sonora.
 factor: O fator de velocidade, determinando quanto acelerar ou desacelerar o áudio.
    -   np.arange(0, len(sound_array), factor): gera uma matriz de índices percorrendo a matriz de áudio original com um tamanho de passo determinado pelo fator de velocidade.
@@ -97,14 +98,14 @@ indices[indices < len(sound_array)].astype(int): filtra os índices que excedem 
    A função é um método simples, mas eficaz, para alterar a velocidade de reprodução de um array de áudio. Isso é conseguido selecionando um subconjunto de amostras da matriz original em intervalos determinados pelo fator de velocidade.
 
 
-open_file:
+**open_file:**
    -   filedialog.askopenfilename(): abre uma caixa de diálogo que permite ao utilizador escolher um ficheiro. Esta função retorna o caminho do fiheiro selecionado.
    -   entry_file_path.delete(0, tk.END): limpa o conteúdo do entry_file_pathwidget, que normalmente é um Entrywidget Tkinter usado para exibir o caminho do ficheiro selecionado.
 entry_file_path.insert(0, file_path): insere o caminho do ficheiro selecionado no entry_file_pathwidget na posição 0.
    A função fornece uma maneira para o usuário escolher um ficheiro de áudio abrindo uma caixa de diálogo. Depois que um ficheiro é selecionado, ele atualiza um Entrywidget Tkinter com o caminho do ficheiro selecionado, tornando-o visível para o utilizador na GUI.
 
 
-process_audio:
+**process_audio:**
    -   filedialog.asksaveasfilename(defaultextension=".wav", filetypes=[("Arquivos WAV", "*.wav")]): abre uma caixa de diálogo para salvar o áudio processado. Ele solicita que o utilizador escolha um nome do fiheiro e o local com extensão padrão ".wav".
    -   input_path = entry_file_path.get(): recupera o caminho do fiheiro de entrada do Entrywidget Tkinter chamado entry_file_path, que normalmente exibe o caminho do ficheiro de áudio selecionado.
 pitch_factor = float(entry_pitch.get()): recupera o fator de pitch do Scalewidget Tkinter chamado entry_pitch.
@@ -119,7 +120,7 @@ overlap = 2**overlap_exp: calcula a sobreposição com base no expoente recupera
    A função orquestra o processamento de áudio coletando parâmetros de entrada da GUI, calculando o tamanho e a sobreposição da janela e, em seguida, invocando a alterar_audiofunção com esses parâmetros. Ele também lida com possíveis erros relacionados a ficheiros usando a FileNotFoundErrorexceção.
 
 
-preview_audio:
+**preview_audio:**
    -   input_path = entry_file_path.get(): recupera o caminho do ficheiro de entrada do Entrywidget Tkinter chamado entry_file_path.
 output_path = "temp.wav": especifica um caminho de saída temporário para o áudio modificado.
    -   Semelhante à process_audiofunção, esta parte recupera fator de pitch, fator de velocidade, tamanho da janela, sobreposição e valor do controle deslizante de velocidade da GUI.
@@ -133,16 +134,9 @@ play(audio): Usa a função do Pydub playpara reproduzir o áudio modificado.
    A função permite aos utilizadores visualizar o áudio modificado reproduzindo-o na GUI. Ele usa um ficheiro temporário para armazenar o áudio modificado e remove o ficheiro temporário após a visualização. Quaisquer erros potenciais são capturados e tratados usando a FileNotFoundErrorexceção.
 
 
-errorIO:
+**errorIO:**
    -   input_path = entry_file_path.get(): recupera o caminho do ficheiro de entrada do Entrywidget Tkinter chamado entry_file_path. Este é o caminho que causou um erro relacionado à  entrada/saída (E/S).
    -   if not input_path:: verifica se o caminho de entrada é uma string vazia. Esta condição é verdadeira quando o utilizador não selecionou nenhum caminho de ficheiro.
    -   messagebox.showerror("Erro", "Introduza um caminho de ficheiro de áudio existente."): se o caminho de entrada estiver vazio, uma caixa de mensagem será exibida com uma mensagem de erro solicitando que o utilizador insira um caminho de ficheiro de áudio válido.
 messagebox.showerror("Erro", "Caminho introduzido não existe no seu computador."): Se o caminho de entrada não estiver vazio, mas o ficheiro especificado não for encontrado, outra caixa de mensagem será exibida com uma mensagem de erro indicando que o caminho inserido não existe no computador.
    A função é um mecanismo simples de tratamento de erros para problemas relacionados a E/S na GUI. Ele verifica se o caminho de entrada está vazio e exibe uma caixa de diálogo de mensagem de erro apropriada.
-
-
-
-
-
-   
-
