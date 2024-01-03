@@ -141,11 +141,15 @@ Filtros Butterworth de ordens mais altas geralmente apresentam características 
 Vamos agora mostrar e descrever como funciona a aplicação.
 
 Quando a aplicação é executada, abre uma janela e um gráfico que regista a frequência que está a ser captada pelo microfone em tempo real.
-Assim que está em execução, o programa calcula a frequência e indica na janela a frequência captada, a nota musical e a oitava.
+Assim que está em execução, o programa calcula a frequência e indica na janela a frequência captada, a oitava e a nota musical.
 
 ![Janela inicial](https://github.com/Jofralso/PDS-3rd-year/blob/DR/DR%20-%20Afinador-Identi-Inst/Menu.png)
 
-O afinador através do som captado pelo microfone do dispositivo, calcula a frequencia e compara com uma lista de notas musicais e depois imprime no terminal a nota correspondente.
+![Gráfico com as frequências (com e sem filtro)](https://github.com/Jofralso/PDS-3rd-year/blob/DR/DR%20-%20Afinador-Identi-Inst/grafico%20de%20frequencias.png)
+
+O utilizador pode, através de um lista, adaptar o programa para varios tipos de instrumentos.
+
+![Lista de instrumentos](https://github.com/Jofralso/PDS-3rd-year/blob/DR/DR%20-%20Afinador-Identi-Inst/instrumentos%20disponiveis.png)
 
 ## Referências
 
