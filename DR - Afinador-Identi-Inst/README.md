@@ -124,8 +124,8 @@ onde:
 - $\( n \)$ é a ordem do filtro.
 
 A frequência de corte $\( \omega_c \)$ é o ponto onde a magnitude da resposta em frequência é 3 dB abaixo do ganho na faixa de passagem.
-Para um filtro Butterworth, as operações matemáticas envolvem manipulação algébrica desta função de transferência. A frequência angular $f$ por $w$ = 2πf está relacionada com a frequência Portanto, a função de transferência também pode ser expressa em termos de F.
-A escolha da ordem n influencia diretamente na rapidez da queda da resposta de frequência. Ordens mais altas resultam em transições mais rápidas, mas também em uma maior complexidade matemática.
+Para um filtro Butterworth, as operações matemáticas envolvem manipulação algébrica desta função de transferência. A frequência angular $f$ por $w = 2πf$ está relacionada com a frequência, portanto, a função de transferência também pode ser expressa em termos de $f$ .
+A escolha da ordem $n$ influencia diretamente na rapidez da queda da resposta de frequência. Ordens mais altas resultam em transições mais rápidas, mas também em uma maior complexidade matemática.
 Os cálculos para projetar o filtro envolvem determinar os coeficientes do polinómio na função de transferência com base na ordem desejada e na frequência de corte. Para ordens mais altas, isso pode envolver raízes complexas.
 
 ## Funcionamento
