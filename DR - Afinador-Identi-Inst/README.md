@@ -131,7 +131,10 @@ Os cálculos para projetar o filtro envolvem determinar os coeficientes do polin
 
 O filtro Butterworth é o único filtro que mantém o mesmo formato para ordens mais elevadas enquanto outras variedades de filtros possuem formatos diferentes para ordens mais elevadas.
 
-![Gráfico com varias ordens do filtro Butterworth](https://github.com/Jofralso/PDS-3rd-year/blob/DR/DR%20-%20Afinador-Identi-Inst/filtroButterworth).
+![Gráfico com varias ordens do filtro Butterworth](https://github.com/Jofralso/PDS-3rd-year/blob/DR/DR%20-%20Afinador-Identi-Inst/filtroButterworth)
+
+Filtros Butterworth de ordens mais altas geralmente apresentam características de resposta em frequência mais acentuadas e abruptas em comparação com ordens mais baixas. Isso pode levar a representações gráficas que parecem desproporcionais ou têm características distintas.
+
 
 ## Funcionamento
 
