@@ -112,7 +112,7 @@ Para calcular um filtro Butterworth, são necessárias operações matemáticas,
 
 Este tipo de filtro é comum em aplicações como filtragem de áudio e processamento de imagens, sendo escolhido quando se pretende uma resposta de frequência suave e previsível.
 
-A função de transferência H$(s)$ de um filtro Butterworth de ordem n pode ser expressa como:
+A função de transferência H $(s)$ de um filtro Butterworth de ordem n pode ser expressa como:
 
 $$
 \[ H(s) = \frac{1}{\sqrt{1 + \left(\frac{s}{\omega_c}\right)^{2n}}} \]
