@@ -41,10 +41,10 @@ O nosso programa recorre a várias bibliotecas para chegar ao seu estado final, 
 3. **Numpy:**
    - Utilizamos esta biblioteca para realizar operações numéricas eficientes sobre as amostras de áudio, utilizado nas funções de alteração de áudio como, funções de alterar tom e velocidade do áudio e na função stretch.
 
-4- **OS:**
+4. **OS:**
    - Esta biblioteca fornece uma interface para interagir com o sistema operativo, na prática precisamos de implementar esta biblioteca para a opção de pré-visualizar o áudio, onde criamos um ficheiro temporário e depois remover o ficheiro com a função “os.remove()”.
 
-5- **Pydub.playback:**
+5. **Pydub.playback:**
    - Esta biblioteca basicamente server para reproduzir o áudio escolhido e modificado pelo utilizador ao clicar no botão “Pré-visualizar”, isto com a função “play(audio)”.
 
 ## Funções
