@@ -54,7 +54,7 @@ O Python é uma linguagem de programação de alto nível, interpretada, orienta
 
 Para desenvolver a aplicação, utilizamos diversas bibliotecas que vamos agora descrever.
 
-- __tkinter__: É uma biblioteca gráfica que permite criar interfaces gráficas para o utilizador (GUI's) em Python. É baseada no kit de ferramentas Tcl/Tk GUI e é a interface padrão do Python. Com o tkinter, é possivel criar janelas, botões, caixas de texto, menus, entre outros elementos da interface gráfica.
+- __tkinter__: É uma biblioteca gráfica que permite criar interfaces gráficas para o utilizador (GUI's) em Python. É baseada no kit de ferramentas Tcl/Tk GUI e é a interface padrão do Python. Com o tkinter, é possível criar janelas, botões, caixas de texto, menus, entre outros elementos da interface gráfica.
 
 - __matplotlib.animation.FuncAnimation__: É uma classe da biblioteca matplotlib que permite criar animações em Python. É usada para criar animações de gráficos, como gráficos de linha, de barra, de dispersão, entre outros. A classe FuncAnimation permite criar animações com base em uma função que é chamada repetidamente em intervalos regulares.
 
@@ -72,11 +72,11 @@ Para desenvolver a aplicação, utilizamos diversas bibliotecas que vamos agora 
 
 ## Funções 
 
-Para que o código do programa fique mais organizado e não exista repetição de codigo, decidimos criar algumas funções que vamos agora explicar como funcionam.
+Para que o código do programa fique mais organizado e não exista repetição de código, decidimos criar algumas funções que vamos agora explicar como funcionam.
 
 - __executarComoThread()__: Define a animação do gráfico no Python. Cria uma animação do gráfico que é atualizada a cada 500 milissegundos. A função atualizarGrafico() é executada a cada atualização e é responsável por atualizar o gráfico.
 
-- __atualizarGrafico()__: Define uma função que recebe um parâmetro i. A função atualiza os valores do eixo X e plota um gráfico com valores das frequências. O gráfico é composto por duas linhas, uma vermelha e outra azul, que representam as frequências sem filtro e com filtro, respectivamente. O gráfico também possui um título, rótulos para os eixos X e Y e uma legenda. O limite do eixo Y é definido de acordo com a opção do instrumento escolhido. Além disso, a função adiciona os valores no gráfico.
+- __atualizarGrafico()__: Define uma função que recebe um parâmetro i. A função atualiza os valores do eixo X e plota um gráfico com valores das frequências. O gráfico é composto por duas linhas, uma vermelha e outra azul, que representam as frequências sem filtro e com filtro, respetivamente. O gráfico também possui um título, rótulos para os eixos X e Y e uma legenda. O limite do eixo Y é definido de acordo com a opção do instrumento escolhido. Além disso, a função adiciona os valores no gráfico.
 
 - __butterBandpass()__: Define uma função que implementa um filtro passa-banda Butterworth. Aceita quatro argumentos: lowcut, highcut, fs e order.
 
@@ -94,10 +94,10 @@ Para que o código do programa fique mais organizado e não exista repetição d
 
 - __buscarBlocoNotas()__: Define uma função que recebe um argumento "option" e define a variável global "blocoNotas" com base no valor de "option".
 
-- __introduzirNotas()__: Define uma função que recebe um número variável de argumentos. A função tem como objetivo buscar um bloco de notas, limpar o dicionário "notas", ler o bloco de notas e armazená-las no dicionário "notas". Em seguida, a função procura o menor e o maior valor do dicionário "notas" e os armazena nas variáveis globais "menorValor" e "maiorValor", respectivamente. Por fim, a função imprime o menor e o maior valor do dicionário "notas" e verifica se o dicionário está correto, imprimindo as chaves e os valores do dicionário "notas".
+- __introduzirNotas()__: Define uma função que recebe um número variável de argumentos. A função tem como objetivo buscar um bloco de notas, limpar o dicionário "notas", ler o bloco de notas e armazená-las no dicionário "notas". Em seguida, a função procura o menor e o maior valor do dicionário "notas" e os armazena nas variáveis globais "menorValor" e "maiorValor", respetivamente. Por fim, a função imprime o menor e o maior valor do dicionário "notas" e verifica se o dicionário está correto, imprimindo as chaves e os valores do dicionário "notas".
 
 - __ouvir()__: Define uma função que durante um intervalo de tempo recolhe o que é captado pelo microfone e guarda num array. Após isso, a array é convertida para uma array numpy do tipo int16, é aplicado o filtro passa-banda e são calculadas as frequências com e sem filtro.
-Depois são executadas algumas operações com base no valor de "selected_option". Se "selected_option" for igual a "Notas Gerais", o código itera sobre o dicionário "notas" e encontra o valor mais próximo da frequência. Se "selected_option" não for igual a "Notas Gerais", o código itera sobre o dicionário "notas" e encontra a nota que corresponde à frequencia fornecida. Se a frequência captada for menor que a frequência exata da nota, a variável "simbolo" é definida como "--->" e a variável "cor" é definida como "red". Se a frequência captada for maior que a frequência exata da nota, a variável "simbolo" é definida como "<---" e a variável "cor" é definida como "red". Caso contrário, a variável "simbolo" é definida como "OK" e a variável "cor" é definida como "green".
+Depois são executadas algumas operações com base no valor de "selected_option". Se "selected_option" for igual a "Notas Gerais", o código itera sobre o dicionário "notas" e encontra o valor mais próximo da frequência. Se "selected_option" não for igual a "Notas Gerais", o código itera sobre o dicionário "notas" e encontra a nota que corresponde à frequência fornecida. Se a frequência captada for menor que a frequência exata da nota, a variável "simbolo" é definida como "--->" e a variável "cor" é definida como "red". Se a frequência captada for maior que a frequência exata da nota, a variável "simbolo" é definida como "<---" e a variável "cor" é definida como "red". Caso contrário, a variável "simbolo" é definida como "OK" e a variável "cor" é definida como "green".
 
 ## Filtro Butterworth
 
@@ -147,11 +147,11 @@ Assim que está em execução, o programa calcula a frequência e indica na jane
 
 ![Gráfico com as frequências (com e sem filtro)](https://github.com/Jofralso/PDS-3rd-year/blob/DR/DR%20-%20Afinador-Identi-Inst/grafico%20de%20frequencias.png)
 
-O utilizador pode, através de um lista, adaptar o programa para varios tipos de instrumentos.
+O utilizador pode, através de uma lista, adaptar o programa para vários tipos de instrumentos.
 
 ![Lista de instrumentos](https://github.com/Jofralso/PDS-3rd-year/blob/DR/DR%20-%20Afinador-Identi-Inst/instrumentos%20disponiveis.png)
 
-Por exemplo, se o utilizador escolher o instrumento musica "Guitarra" e toca numa corda do instrumento, o programa vai analisar o som e descobrir qual é a nota que mais se assemelha ao som captada.
+Por exemplo, se o utilizador escolher o instrumento música "Guitarra" e toca numa corda do instrumento, o programa vai analisar o som e descobrir qual é a nota que mais se assemelha ao som captada.
 Depois é indicado se a corda esta afinada ou não, dependendo da nota musical captada.
 
 ![Instrumento desafinado](https://github.com/Jofralso/PDS-3rd-year/blob/DR/DR%20-%20Afinador-Identi-Inst/frequencia%20errada.png)
