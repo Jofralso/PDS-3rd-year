@@ -151,6 +151,13 @@ O utilizador pode, através de um lista, adaptar o programa para varios tipos de
 
 ![Lista de instrumentos](https://github.com/Jofralso/PDS-3rd-year/blob/DR/DR%20-%20Afinador-Identi-Inst/instrumentos%20disponiveis.png)
 
+Por exemplo, se o utilizador escolher o instrumento musica "Guitarra" e toca numa corda do instrumento, o programa vai analisar o som e descobrir qual é a nota que mais se assemelha ao som captada.
+Depois é indicado se a corda esta afinada ou não, dependendo da nota musical captada.
+
+![Instrumento desafinado](https://github.com/Jofralso/PDS-3rd-year/blob/DR/DR%20-%20Afinador-Identi-Inst/frequencia%20errada.png)
+
+![Instrumento afinado](https://github.com/Jofralso/PDS-3rd-year/blob/DR/DR%20-%20Afinador-Identi-Inst/frequencia%20correta.png)
+
 ## Referências
 
 https://github.com/Jofralso/PDS-3rd-year/blob/DR/DR%20-%20Afinador-Identi-Inst/README.md, consultado em 29/11/2023
