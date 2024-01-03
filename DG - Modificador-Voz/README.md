@@ -4,6 +4,12 @@
 
 Este projeto tem como objetivo desenvolver um Modificador de Voz, uma aplicação que permitirá alterar características da voz, tais como tom (grave e agudo), velocidade de fala, e até mesmo alterar a voz baseado no gênero sexual selecionado. A aplicação será uma ferramenta versátil e intuitiva para manipulação de áudio, proporcionando uma experiência única aos utilizadores.
 
+## Colaboradores
+
+- **Diogo Oliveira:**
+
+- **Guilherme Castro:**
+
 ## Funcionalidades Principais
 
 1. **Alteração de Tom (Grave e Agudo):**
@@ -14,13 +20,6 @@ Este projeto tem como objetivo desenvolver um Modificador de Voz, uma aplicaçã
 
 3. **Alteração da Voz pelo Género:**
    - A aplicação será capaz de alterar a voz do áudio com base no gênero sexual selecionado. Essa funcionalidade pode ser útil para diversos contextos, desde brincadeiras divertidas até aplicações mais sérias.
-
-## Colaboradores
-
-- **Diogo Oliveira:**
-
-- **Guilherme Castro:**
-
 
 ## Instruções de Uso
 
