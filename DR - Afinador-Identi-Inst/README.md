@@ -108,11 +108,11 @@ O filtro Butterworth é um tipo de filtro usado em processamento de sinal e aná
 
 O filtro é caracterizado pela sua ordem (n), que determina a rapidez da transição. A escolha da frequência de corte (onde ocorre a transição) e da ordem é feita conforme os requisitos do sistema.
 
-Para calcular um filtro Butterworth, são necessárias operações matemáticas, especialmente aquelas relacionadas à função de transferência do filtro. A função de transferência é expressa em termos de polinómios e raízes complexas. A frequência de corte e a ordem do filtro são utilizadas nestes cálculos para projetar o filtro Butterworth desejado.
+Para calcular um filtro Butterworth, são necessárias operações matemáticas, especialmente as relacionadas à função de transferência do filtro. A função de transferência é expressa em termos de polinómios e raízes complexas. A frequência de corte e a ordem do filtro são utilizadas nestes cálculos para projetar o filtro Butterworth desejado.
 
-Este tipo de filtro é comum em aplicações como filtragem de áudio e processamento de imagens, sendo escolhido quando se pretende uma resposta de frequência suave e previsível
+Este tipo de filtro é comum em aplicações como filtragem de áudio e processamento de imagens, sendo escolhido quando se pretende uma resposta de frequência suave e previsível.
 
-A função de transferência H(s) de um filtro Butterworth de ordem n pode ser expressa como:
+A função de transferência H$(s)$ de um filtro Butterworth de ordem n pode ser expressa como:
 
 $$
 \[ H(s) = \frac{1}{\sqrt{1 + \left(\frac{s}{\omega_c}\right)^{2n}}} \]
