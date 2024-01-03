@@ -2,7 +2,7 @@
 
 ## Descrição do Projeto
 
-Este projeto tem como objetivo desenvolver um Modificador de Voz, uma aplicação que permitirá alterar características da voz, tais como tom (grave e agudo), velocidade de fala, e até mesmo identificar o gênero sexual baseado na voz. A aplicação será uma ferramenta versátil e intuitiva para manipulação de áudio, proporcionando uma experiência única aos utilizadores.
+Este projeto tem como objetivo desenvolver um Modificador de Voz, uma aplicação que permitirá alterar características da voz, tais como tom (grave e agudo), velocidade de fala, e até mesmo alterar a voz baseado no gênero sexual selecionado. A aplicação será uma ferramenta versátil e intuitiva para manipulação de áudio, proporcionando uma experiência única aos utilizadores.
 
 ## Funcionalidades Principais
 
