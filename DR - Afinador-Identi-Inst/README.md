@@ -64,10 +64,9 @@ Para desenvolver a aplicação, utilizamos diversas bibliotecas que vamos agora 
 
 - __numpy__: É uma biblioteca que fornece suporte para arrays e matrizes multidimensionais em Python. É usada para realizar operações matemáticas em arrays e matrizes, como adição, subtração, multiplicação, divisão, entre outras. A biblioteca numpy é muito útil para trabalhar com dados numéricos em Python.
 
-- __scipy.signal.butter__: É uma função da biblioteca scipy.signal que é usada para projetar filtros digitais. É usada para criar filtros digitais que podem ser usados para filtrar sinais de áudio, sinais de vídeo, entre outros.
+- __scipy.signal.butter__: É uma função da biblioteca scipy.signal que é usada para projetar filtros digitais que podem ser usados para filtrar sinais de áudio, sinais de vídeo, entre outros.
 
-
-- __scipy.signal.lfilter__: É uma função da biblioteca scipy.signal que é usada para filtrar sinais digitais. É usada para aplicar um filtro digital a um sinal digital. A função lfilter é muito útil para filtrar sinais de áudio, sinais de vídeo, entre outros.
+- __scipy.signal.lfilter__: É uma função da biblioteca scipy.signal que é usada para filtrar sinais digitais. A função lfilter é muito útil para filtrar sinais de áudio, sinais de vídeo, entre outros.
 
 - __threading__: É uma biblioteca que fornece suporte para threads em Python. É usada para criar e gerir threads no Python. A biblioteca threading é muito útil para criar aplicações que precisam executar várias tarefas simultaneamente.
 
@@ -147,3 +146,5 @@ https://github.com/Jofralso/PDS-3rd-year/blob/DR/DR%20-%20Afinador-Identi-Inst/R
 https://elearning2324.estgl.ipv.pt/course/view.php?id=155, consultado em 29/11/2023
 
 https://www.python.org/, consultado em 29/11/2023
+
+https://pt.wikipedia.org/wiki/Filtro_Butterworth, consultado em 3/1/24
