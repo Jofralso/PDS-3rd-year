@@ -29,7 +29,7 @@ Este projeto tem como objetivo desenvolver um Modificador de Voz, uma aplicaçã
 
 ## Bibliotecas 
 
-O nosso programa recorre a várias bibliotecas para chegar ao seu estado final, desde bibliotecas para criar a interface gráfica do programa, para a manipulação e reprodução de áudios e importação e exportação de áudios. A seguir poderá observar as bibliotecas utilizadas e uma breve explicação sobre elas.
+O nosso programa recorre a várias bibliotecas para chegar ao seu estado final, foram necessárias para desenvolver a interface gráfica do programa, para a manipulação e reprodução de áudios, importação e exportação de áudios. A seguir poderá observar as bibliotecas utilizadas e uma breve explicação sobre elas.
 
 1. **Tkinter:**
    - Utilizamos esta biblioteca para criar a interface gráfica (GUI) do nosso programa, onde possibilitou-nos criar sliders para alterar o valor dos parâmetros como a velocidade, tom, tamanho da janela e sobreposição entre valores anteriormente definidos, também criamos botões para procurar o ficheiro de áudio, pré-visualizar o áudio modificado e guardar áudio, por fim utilizamos para mostrar as mensagens de erro. 
