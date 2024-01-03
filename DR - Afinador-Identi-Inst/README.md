@@ -19,6 +19,8 @@ __Bibliotecas utilizadas__
 
 __Funções__
 
+__Filtro Butterworth__
+
 __Referências__
 
 ## Introdução
