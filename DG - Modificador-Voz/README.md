@@ -58,7 +58,7 @@ Esta função têm como função obter todos os parâmetros introduzidos pelo ut
    -   **sound_array = np.array(audio.get_array_of_samples()):** Os dados do áudio são convertidos em um array NumPy com o método "get_array_of_samples()", onde guarda uma matriz de números que representa a onda sonora.
    -   **pitch_and_speed_shifted_array:** é nesta variável onde é armazenado todas as alterações sobre o áudio utilizando a função pitchshift(sound_array, pitch_factor, speed_factor, window_size, overlap), esta função aplica mudança de tom e mudança de velocidade ao conjunto de áudio.
    -   **pitch_and_speed_shifted_audio: = audio._spawn(pitch_and_speed_shifted_array.astype(np.int16)):** esta linha de código criar novo AudioSegment a partir do array NumPy modificado anteriormente, utilizando o método "_spawn()".
-   -   **Condição ambiente:** É feita uuma verificação com a variável ambiente, em que caso seja verdade, quer dizer que o utilizador escolheu um ambiente sonoro. Após isso, é feito o ajusto do tamanho do áudio do ambiente para o áudio modifcado, depois é feita a sobreposição de ambos os áudios
+   -   **Condição ambiente:** É feita uma verificação com a variável ambiente, no caso de ser verdadeira, quer dizer que o utilizador escolheu um ambiente sonoro, logo é feito o ajusto do tamanho do áudio do ambiente para o áudio modifcado, realiza a sobreposição dos arrays de amostras do áudio modificado e do áudio ambiente e soma os arrays para criar um array combinado (mixed_array). 
    -   **pitch_and_speed_shifted_audio.export(output_path, format="wav"):** O áudio modificado é exportado para o caminho de sáida especificado no formato WAV ao utilizar o método export().
 
 
@@ -66,13 +66,8 @@ Esta função têm como função obter todos os parâmetros introduzidos pelo ut
 
 A função pitchshift() é onde é realizado a alteração do tom entre grave e agudo do áudio introduzido pelo utilizador. A seguir poderá observar uma explicação mais detalhada acerca do funcionamento desta função. 
 
-   -   snd_array: A matriz de áudio de entrada (matriz NumPy) que representa a onda sonora.
-n: O fator de afinação, indica o número de semitons para mudar a afinação. Os valores positivos aumentam o tom e valores negativos diminuem o tom.
-speed_factor: Um fator para ajustar a velocidade do áudio.
-window_size: O tamanho da janela de análise usada para processar o áudio.
-overlap: A quantidade de sobreposição entre janelas de análise consecutivas.
-   -   factor = 2**(1.0 * n / 12.0): Calcula o fator de mudança de afinação com base no fator de afinação especificado ( n). A fórmula converte o fator de altura de semitons em um fator multiplicativo usando a fórmula para proporções de frequência na teoria musical.
-   -   stretched = stretch(snd_array, 1.0 / (factor * speed_factor), window_size, overlap): chama a stretchfunção para ampliar a matriz de áudio de entrada. Isso envolve a manipulação do algoritmo do vocoder de fase para modificar a duração do áudio, preservando seu tom.
+   -   factor = 2**(1.0 * n / 12.0): Calcula o fator de mudança de afinação do tom com base no fator de afinação especificado (n) pelo utilizador. A fórmula converte o fator de altura de semitons em um fator multiplicativo usando a fórmula para proporções de frequência na teoria musical.
+   -   **stretched = stretch(snd_array, 1.0 / (factor * speed_factor), window_size, overlap):* chama a função stretch para ampliar a matriz de áudio de entrada. Isso envolve a manipulação do algoritmo do vocoder de fase para modificar a duração do áudio, preservando seu tom.
    -   return speedx(stretched[window_size:], factor): ajusta ainda mais a velocidade do áudio esticado usando a speedxfunção. A stretched[window_size:]peça é utilizada para descartar as amostras iniciais, que podem ser afetadas por artefatos durante o alongamento.
    A função combina operações de mudança de tom e mudança de velocidade para modificar a matriz de áudio de entrada com base no fator de tom, fator de velocidade, tamanho da janela e sobreposição especificados. Ele utiliza a stretchfunção de alongamento do tempo e a speedxfunção de ajuste de velocidade.
 
