@@ -51,13 +51,15 @@ O nosso programa recorre a várias bibliotecas para chegar ao seu estado final, 
 Este programa é constituído por várias funções, nelas são implementadas as alterações do áudio face as opções que o utilizador selecionar, como funções para alterar a velocidade e o tom, manipulação e reprodução de áudio, importação e exportação de áudio. A seguir é explicado como funciona cada uma das funções do nosso programa.
 
 **alterar_audio:**
-   -   audio = AudioSegment.from_file(input_path): Esta linha usa a classe Pydub AudioSegmentpara carregar um ficheiro de áudio do ficheiro input_path.
-   -   sound_array = np.array(audio.get_array_of_samples()): Os dados de áudio são convertidos em um array NumPy usando o get_array_of_samplesmétodo. Esta matriz representa a onda sonora.
-   -   pitch_and_speed_shifted_array = pitchshift(sound_array, pitch_factor, speed_factor, window_size, overlap): A pitchshiftfunção é chamada com a matriz de som e parâmetros de afinação, velocidade, tamanho da janela e sobreposição especificados. Esta função aplica mudança de tom e mudança de velocidade ao conjunto de áudio.
-   -   pitch_and_speed_shifted_audio = audio._spawn(pitch_and_speed_shifted_array.astype(np.int16)): Um novo AudioSegment é criado a partir do array NumPy modificado. O _spawnmétodo é usado para criar um novo segmento.
-   -   pitch_and_speed_shifted_audio.export(output_path, format="wav"): O áudio modificado é exportado para o output_pathformato WAV especificado usando o exportmétodo.
-   -   print("Áudio criado com sucesso"): uma mensagem de sucesso é impressa indicando que o áudio foi criado com sucesso.
-   Esta função alterar_audio é a principal responsável por carregar um fiheiro de áudio, aplicar mudança de tom e mudança de velocidade, criar um novo segmento de áudio modificado e exportar o resultado para um caminho de saída especificado.
+
+Esta função têm como função obter todos os parâmetros introduzidos pelo utilizador, desde caminho de entrada e saida do áudio, o valor de ajuste do tom, da velocidade, o tamanho da janela, a sobreposição e por fim o ambiente sonoro, depois realizar as alterações introduzidas pelo utilizado sobre o áudio original. Por fim cria um novo segmento de áudio modificado e faz a exportação para um caminho de sáida especificado.  
+
+   -   **audio = AudioSegment.from_file(input_path):** Esta linha de código carrega o ficheiro de áudio guardado na variável input_path.
+   -   **sound_array = np.array(audio.get_array_of_samples()):** Os dados do áudio são convertidos em um array NumPy com o método "get_array_of_samples()", onde guarda uma matriz de números que representa a onda sonora.
+   -   **pitch_and_speed_shifted_array:** é nesta variável onde é armazenado todas as alterações sobre o áudio utilizando a função pitchshift(sound_array, pitch_factor, speed_factor, window_size, overlap), esta função aplica mudança de tom e mudança de velocidade ao conjunto de áudio.
+   -   **pitch_and_speed_shifted_audio: = audio._spawn(pitch_and_speed_shifted_array.astype(np.int16)):** esta linha de código criar novo AudioSegment a partir do array NumPy modificado anteriormente, utilizando o método "_spawn()".
+   -   **Condição ambiente:** É feita uuma verificação com a variável ambiente, em que caso seja verdade, quer dizer que o utilizador escolheu um ambiente sonoro. Após isso, é feito o ajusto do tamanho do áudio do ambiente para o áudio modifcado, depois é feita a sobreposição de ambos os áudios
+   -   **pitch_and_speed_shifted_audio.export(output_path, format="wav"):** O áudio modificado é exportado para o caminho de sáida especificado no formato WAV ao utilizar o método export().
 
 
 **pitchshift:**
