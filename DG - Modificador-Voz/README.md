@@ -18,7 +18,7 @@ Este projeto tem como objetivo desenvolver um Modificador de Voz, uma aplicaçã
 2. **Modificação de Velocidade de Voz:**
    - Os utilizadores terão controle total sobre a velocidade da fala, permitindo acelerar ou desacelerar a reprodução do áudio. Essa funcionalidade pode ser útil para diversas finalidades, como reprodução mais rápida para transcrições ou mais lenta para compreensão detalhada.
 
-3. **Implementar Ambiente Sonoro:**
+3. **Implementação de Ambiente Sonoro:**
    - Os utilizadores serão capazes de adicionar um dos ambientes sonoros predefinidos no programa ao áudio selecionado. Esta funcionalidade pode ser útil para ambientar diversos contextos, desde brincadeiras até aplicações mais sérias.
 
 ## Instruções de Uso
