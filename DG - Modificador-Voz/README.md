@@ -2,7 +2,7 @@
 
 ## Descrição do Projeto
 
-Este projeto tem como objetivo desenvolver um Modificador de Voz, uma aplicação que permitirá alterar características da voz, tais como tom (grave e agudo), velocidade de fala, e até mesmo alterar a voz baseado no gênero sexual selecionado. A aplicação será uma ferramenta versátil e intuitiva para manipulação de áudio, proporcionando uma experiência única aos utilizadores.
+Este projeto tem como objetivo desenvolver um Modificador de Voz, uma aplicação que permitirá alterar características da voz, tais como tom (grave e agudo), velocidade de fala e também adicionar um ambiente sonoro ao áudio. A aplicação é uma ferramenta versátil e intuitiva para manipulação de áudio, proporcionando uma experiência única aos utilizadores.
 
 ## Colaboradores
 
@@ -18,13 +18,13 @@ Este projeto tem como objetivo desenvolver um Modificador de Voz, uma aplicaçã
 2. **Modificação de Velocidade de Voz:**
    - Os utilizadores terão controle total sobre a velocidade da fala, permitindo acelerar ou desacelerar a reprodução do áudio. Essa funcionalidade pode ser útil para diversas finalidades, como reprodução mais rápida para transcrições ou mais lenta para compreensão detalhada.
 
-3. **Alteração da Voz pelo Género:**
-   - A aplicação será capaz de alterar a voz do áudio com base no gênero sexual selecionado. Essa funcionalidade pode ser útil para diversos contextos, desde brincadeiras divertidas até aplicações mais sérias.
+3. **Implementar Ambiente Sonoro:**
+   - Os utilizadores serão capazes de adicionar um dos ambientes sonoros predefinidos no programa ao áudio selecionado. Esta funcionalidade pode ser útil para ambientar diversos contextos, desde brincadeiras até aplicações mais sérias.
 
 ## Instruções de Uso
 
 1. Abra a aplicação e escolha o ficheiro de áudio desejado.
-2. Utilize as opções de controle para ajustar o tom, a velocidade e/ou alterar o gênero conforme suas preferências.
+2. Utilize as opções de controlo para ajustar o tom, a velocidade e/ou adicionar ambiente sonoro conforme suas preferências.
 3. Pré-Visualize ou salve o áudio modificado.
 
 ## Bibliotecas 
@@ -61,6 +61,9 @@ Este programa é constituído por várias funções, nelas são implementadas as
 
 
 **pitchshift:**
+
+A função pitchshift() é onde é realizado a alteração do tom entre grave e agudo do áudio introduzido pelo utilizador. A seguir poderá observar uma explicação mais detalhada acerca do funcionamento desta função. 
+
    -   snd_array: A matriz de áudio de entrada (matriz NumPy) que representa a onda sonora.
 n: O fator de afinação, indica o número de semitons para mudar a afinação. Os valores positivos aumentam o tom e valores negativos diminuem o tom.
 speed_factor: Um fator para ajustar a velocidade do áudio.
