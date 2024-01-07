@@ -113,7 +113,7 @@ Esta função é executada quando o utilizador clica no botão "procurar", forne
 
 **process_audio:**
 
- A função process_audio() realiza o processamento de áudio coletando parâmetros de entrada da GUI, calculando o tamanho e a sobreposição da janela e, em seguida, invocando a alterar_audio com esses parâmetros, também lida com possíveis erros relacionados a ficheiros usando a FileNotFoundError.
+ A função process_audio() realiza o processamento de áudio coletando parâmetros de entrada da GUI, calculando o tamanho e a sobreposição da janela e, em seguida, invocando a função alterar_audio com esses parâmetros, também lida com possíveis erros relacionados a ficheiros usando a FileNotFoundError.
 
    -   **filedialog.asksaveasfilename(defaultextension=".wav", filetypes=[("Arquivos WAV", "*.wav")]):** abre uma caixa de diálogo para salvar o áudio processado.
 
@@ -137,22 +137,22 @@ Por fim é chamado a função alterar_audio() com todos os parâmetros obtidos a
   
 
 **preview_audio:**
-   -   input_path = entry_file_path.get(): recupera o caminho do ficheiro de entrada do Entrywidget Tkinter chamado entry_file_path.
-output_path = "temp.wav": especifica um caminho de saída temporário para o áudio modificado.
-   -   Semelhante à process_audiofunção, esta parte recupera fator de pitch, fator de velocidade, tamanho da janela, sobreposição e valor do controle deslizante de velocidade da GUI.
-   -   window_size = 2**window_size_exp: calcula o tamanho da janela com base no expoente recuperado da GUI.
-overlap = 2**overlap_exp: calcula a sobreposição com base no expoente recuperado da GUI.
-   -   alterar_audio(input_path, output_path, pitch_factor, speed_factor * speed_slider_value, window_size, overlap): chama a alterar_audiofunção com os parâmetros de entrada especificados. Modifica o áudio e o salva em um arquivo temporário ( temp.wav).
-   -   audio = AudioSegment.from_file(output_path): Carrega o áudio modificado do ficheiro temporário usando o Pydub AudioSegment.
-play(audio): Usa a função do Pydub playpara reproduzir o áudio modificado.
-   -   os.remove(output_path): Remove o ficheiro temporário criado durante a visualização. Esta etapa é necessária para limpar ficheiros temporários.
-   -   except FileNotFoundError:: captura uma FileNotFoundErrorexceção que pode ocorrer se o ficheiro de entrada especificado não for encontrado ou se houver problemas com o caminho do ficheiro. Nesse caso, ele chama a errorIOfunção para tratar o erro.
-   A função permite aos utilizadores visualizar o áudio modificado reproduzindo-o na GUI. Ele usa um ficheiro temporário para armazenar o áudio modificado e remove o ficheiro temporário após a visualização. Quaisquer erros potenciais são capturados e tratados usando a FileNotFoundErrorexceção.
+
+A função preview_audio() tal como a função anterior realiza o processamento de áudio coletando parâmetros de entrada da GUI e invoca a função alterar_audio() com esses parâmetros. Esta função é executada quando o utilizador pressiona o botão de pré-visualizar o áudio, logo é criado um ficheiro temporário com as alterações introduzidas pelo utilizador e utiliza-se a função play() para tocar o áudio modificado, após isso o ficheiro criado é removido.
+
+- **output_path = "temp.wav":** especifica um caminho de saída temporário para o áudio modificado.
+- **audio = AudioSegment.from_file(output_path):** Carrega o áudio modificado do ficheiro temporário.
+- **play(audio):** Usa a função do Pydub play() para reproduzir o áudio modificado.
+- **os.remove(output_path):** Remove o ficheiro temporário criado durante a pré-visualização para limpar ficheiros temporários.
+- **except FileNotFoundError:** captura a exeção "FileNotFoundError", que pode ocorrer se o ficheiro de entrada especificado não for encontrado, nesse caso, chama a função "errorIO()" para mostrar o erro ao utilizador.
 
 
 **errorIO:**
-   -   input_path = entry_file_path.get(): recupera o caminho do ficheiro de entrada do Entrywidget Tkinter chamado entry_file_path. Este é o caminho que causou um erro relacionado à  entrada/saída (E/S).
-   -   if not input_path:: verifica se o caminho de entrada é uma string vazia. Esta condição é verdadeira quando o utilizador não selecionou nenhum caminho de ficheiro.
-   -   messagebox.showerror("Erro", "Introduza um caminho de ficheiro de áudio existente."): se o caminho de entrada estiver vazio, uma caixa de mensagem será exibida com uma mensagem de erro solicitando que o utilizador insira um caminho de ficheiro de áudio válido.
-messagebox.showerror("Erro", "Caminho introduzido não existe no seu computador."): Se o caminho de entrada não estiver vazio, mas o ficheiro especificado não for encontrado, outra caixa de mensagem será exibida com uma mensagem de erro indicando que o caminho inserido não existe no computador.
-   A função é um mecanismo simples de tratamento de erros para problemas relacionados a E/S na GUI. Ele verifica se o caminho de entrada está vazio e exibe uma caixa de diálogo de mensagem de erro apropriada.
+
+Esta função é um mecanismo simples de tratamento de erros para problemas relacionados à introdução de caminho de entrada e saída no programa, onde verifica se o caminho de entrada está vazio ou se existe no computador caso verifique um dos dois, exibe uma caixa de diálogo de mensagem de erro.
+
+-   **input_path = entry_file_path.get():** recupera o caminho do ficheiro de entrada.
+-   **if not input_path::** esta condição verifica se o caminho de entrada é uma string vazia ou se existe no computador.
+-   **messagebox.showerror("Erro", "Introduza um caminho de ficheiro de áudio existente."):** se o caminho de entrada estiver vazio uma caixa de mensagem será exibida com uma mensagem de erro.
+-   **messagebox.showerror("Erro", "Caminho introduzido não existe no seu computador."):** Se o caminho de entrada especificado não for encontrado, outra caixa de mensagem será exibida com uma mensagem de erro.
+   
