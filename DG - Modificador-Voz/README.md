@@ -1,14 +1,20 @@
 # Modificador de Voz
 
+
+
 ## Descrição do Projeto
 
 Este projeto tem como objetivo desenvolver um Modificador de Voz, uma aplicação que permitirá alterar características da voz, tais como tom (grave e agudo), velocidade de fala e também adicionar um ambiente sonoro ao áudio. A aplicação é uma ferramenta versátil e intuitiva para manipulação de áudio, proporcionando uma experiência única aos utilizadores.
+
+
 
 ## Colaboradores
 
 - **Diogo Oliveira:**
 
 - **Guilherme Castro:**
+
+
 
 ## Funcionalidades Principais
 
@@ -21,11 +27,15 @@ Este projeto tem como objetivo desenvolver um Modificador de Voz, uma aplicaçã
 3. **Implementação de Ambiente Sonoro:**
    - Os utilizadores serão capazes de adicionar um dos ambientes sonoros predefinidos no programa ao áudio selecionado. Esta funcionalidade pode ser útil para ambientar diversos contextos, desde brincadeiras até aplicações mais sérias.
 
+
+
 ## Instruções de Uso
 
 1. Abra a aplicação e escolha o ficheiro de áudio desejado.
 2. Utilize as opções de controlo para ajustar o tom, a velocidade e/ou adicionar ambiente sonoro conforme suas preferências.
 3. Pré-Visualize ou salve o áudio modificado.
+
+
 
 ## Bibliotecas 
 
@@ -46,13 +56,11 @@ O nosso programa recorre a várias bibliotecas para chegar ao seu estado final, 
 5. **Pydub.playback:**
    - Esta biblioteca basicamente server para reproduzir o áudio escolhido e modificado pelo utilizador ao clicar no botão “Pré-visualizar”, isto com a função “play(audio)”.
 
+
+
 ## Funções
 
 Este programa é constituído por várias funções, nelas são implementadas as alterações do áudio face as opções que o utilizador selecionar, como funções para alterar a velocidade e o tom, manipulação e reprodução de áudio, importação e exportação de áudio. A seguir é explicado como funciona cada uma das funções do nosso programa.
-
-
-
-
 
 
 1. **alterar_audio:**
@@ -78,7 +86,6 @@ A função pitchshift() é onde é realizado a alteração do tom entre grave e 
 
 3. **stretch:**
 
-
 A função stretch() realiza o alongamento do som introduzido pelo utilizador, onde primeiro divide o som em bits sobrepostos e reorganiza esses bits para que eles se sobreponham ainda mais (se quiser encurtar o som) ou menos (se quiser esticar o som), como nesta figura:
 
 ![stretchsound](https://github.com/Jofralso/PDS-3rd-year/assets/150937501/203fa7a2-0258-48ee-8b9e-bfd12de8eaad)
@@ -96,7 +103,8 @@ Dentro da função é executado várias operações como o algoritmo de codifica
 
 Por fim normaliza a matriz de resultados para garantir que o áudio permaneça dentro de um intervalo de amplitude especificado, converte a matriz de resultados em formato inteiro de 16 bits (int16) para compatibilidade com formatos de arquivo de áudio e retorna o áudio estendido no tempo como uma matriz NumPy.
 
-3. **speedx:**
+
+4. **speedx:**
 
    A função speedx() é utilizado para alterar a velocidade de reprodução de um array de áudio, isso é conseguido ao selecionar um subconjunto de amostras da matriz original em intervalos determinados pelo fator de velocidade. Tem como principais parametros:
    
@@ -109,7 +117,8 @@ Depois são executados os passos seguintes:
    -   **np.round(...):** arredonda os índices para o número inteiro mais próximo, pois os índices do array devem ser números inteiros.
    -   **sound_array[indices.astype(int)]:** usa os índices calculados para selecionar um subconjunto de amostras da matriz de áudio original. Faz uma nova amostragem do áudio em uma taxa diferente com base no fator de velocidade escolhido pelo utilizador e retorna a matriz de áudio modificado.
 
-4. **open_file:**
+
+5. **open_file:**
 
 Esta função é executada quando o utilizador clica no botão "procurar", fornece uma maneira de o utilizador escolher um ficheiro de áudio abrindo uma caixa de diálogo e depois que um ficheiro é selecionado, ele atualiza um Entrywidget Tkinter com o caminho do ficheiro selecionado, tornando-o visível para o utilizador na interface gráfica do programa.
 
@@ -117,7 +126,8 @@ Esta função é executada quando o utilizador clica no botão "procurar", forne
    -   **entry_file_path.delete(0, tk.END):** limpa o conteúdo do entry_file_pathwidget, que normalmente é um Entrywidget Tkinter usado para exibir o caminho do ficheiro selecionado.
    -   **entry_file_path.insert(0, file_path):** insere o caminho do ficheiro selecionado pelo utilizador no entry_file_pathwidget.
 
-5. **process_audio:**
+
+6. **process_audio:**
 
  A função process_audio() realiza o processamento de áudio coletando parâmetros de entrada da GUI, calculando o tamanho e a sobreposição da janela e, em seguida, invocando a função alterar_audio com esses parâmetros, também lida com possíveis erros relacionados a ficheiros usando a FileNotFoundError.
 
@@ -142,7 +152,7 @@ Por fim é chamado a função alterar_audio() com todos os parâmetros obtidos a
    -   **except FileNotFoundError:** captura a exeção "FileNotFoundError", que pode ocorrer se o ficheiro de entrada especificado não for encontrado, nesse caso, chama a função "errorIO()" para mostrar o erro ao utilizador.
   
 
-6. **preview_audio:**
+7. **preview_audio:**
 
 A função preview_audio() tal como a função anterior realiza o processamento de áudio coletando parâmetros de entrada da GUI e invoca a função alterar_audio() com esses parâmetros. Esta função é executada quando o utilizador pressiona o botão de pré-visualizar o áudio, logo é criado um ficheiro temporário com as alterações introduzidas pelo utilizador e utiliza-se a função play() para tocar o áudio modificado, após isso o ficheiro criado é removido.
 
@@ -153,7 +163,7 @@ A função preview_audio() tal como a função anterior realiza o processamento 
 - **except FileNotFoundError:** captura a exeção "FileNotFoundError", que pode ocorrer se o ficheiro de entrada especificado não for encontrado, nesse caso, chama a função "errorIO()" para mostrar o erro ao utilizador.
 
 
-7. **errorIO:**
+8. **errorIO:**
 
 Esta função é um mecanismo simples de tratamento de erros para problemas relacionados à introdução de caminho de entrada e saída no programa, onde verifica se o caminho de entrada está vazio ou se existe no computador caso verifique um dos dois, exibe uma caixa de diálogo de mensagem de erro.
 
