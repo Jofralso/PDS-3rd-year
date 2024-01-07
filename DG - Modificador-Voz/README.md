@@ -50,7 +50,7 @@ O nosso programa recorre a várias bibliotecas para chegar ao seu estado final, 
 
 Este programa é constituído por várias funções, nelas são implementadas as alterações do áudio face as opções que o utilizador selecionar, como funções para alterar a velocidade e o tom, manipulação e reprodução de áudio, importação e exportação de áudio. A seguir é explicado como funciona cada uma das funções do nosso programa.
 
-**alterar_audio:**
+1. **alterar_audio:**
 
 Esta função têm como função obter todos os parâmetros introduzidos pelo utilizador, desde caminho de entrada e saida do áudio, o valor de ajuste do tom, da velocidade, o tamanho da janela, a sobreposição e por fim o ambiente sonoro, depois realizar as alterações introduzidas pelo utilizado sobre o áudio original. Por fim cria um novo segmento de áudio modificado e faz a exportação para um caminho de sáida especificado.  
 
@@ -62,7 +62,7 @@ Esta função têm como função obter todos os parâmetros introduzidos pelo ut
    -   **pitch_and_speed_shifted_audio.export(output_path, format="wav"):** O áudio modificado é exportado para o caminho de sáida especificado no formato WAV ao utilizar o método export().
 
 
-**pitchshift:**
+2. **pitchshift:**
 
 A função pitchshift() é onde é realizado a alteração do tom entre grave e agudo do áudio introduzido pelo utilizador. A seguir poderá observar uma explicação mais detalhada acerca do funcionamento desta função. 
 
@@ -90,7 +90,7 @@ Dentro da função é executado várias operações como o algoritmo de codifica
 
 Por fim normaliza a matriz de resultados para garantir que o áudio permaneça dentro de um intervalo de amplitude especificado, converte a matriz de resultados em formato inteiro de 16 bits (int16) para compatibilidade com formatos de arquivo de áudio e retorna o áudio estendido no tempo como uma matriz NumPy.
 
-**speedx:**
+3. **speedx:**
 
    A função speedx() é utilizado para alterar a velocidade de reprodução de um array de áudio, isso é conseguido ao selecionar um subconjunto de amostras da matriz original em intervalos determinados pelo fator de velocidade. Tem como principais parametros:
    
@@ -103,7 +103,7 @@ Depois são executados os passos seguintes:
    -   **np.round(...):** arredonda os índices para o número inteiro mais próximo, pois os índices do array devem ser números inteiros.
    -   **sound_array[indices.astype(int)]:** usa os índices calculados para selecionar um subconjunto de amostras da matriz de áudio original. Faz uma nova amostragem do áudio em uma taxa diferente com base no fator de velocidade escolhido pelo utilizador e retorna a matriz de áudio modificado.
 
-**open_file:**
+4. **open_file:**
 
 Esta função é executada quando o utilizador clica no botão "procurar", fornece uma maneira de o utilizador escolher um ficheiro de áudio abrindo uma caixa de diálogo e depois que um ficheiro é selecionado, ele atualiza um Entrywidget Tkinter com o caminho do ficheiro selecionado, tornando-o visível para o utilizador na interface gráfica do programa.
 
@@ -111,7 +111,7 @@ Esta função é executada quando o utilizador clica no botão "procurar", forne
    -   **entry_file_path.delete(0, tk.END):** limpa o conteúdo do entry_file_pathwidget, que normalmente é um Entrywidget Tkinter usado para exibir o caminho do ficheiro selecionado.
    -   **entry_file_path.insert(0, file_path):** insere o caminho do ficheiro selecionado pelo utilizador no entry_file_pathwidget.
 
-**process_audio:**
+5. **process_audio:**
 
  A função process_audio() realiza o processamento de áudio coletando parâmetros de entrada da GUI, calculando o tamanho e a sobreposição da janela e, em seguida, invocando a função alterar_audio com esses parâmetros, também lida com possíveis erros relacionados a ficheiros usando a FileNotFoundError.
 
@@ -136,7 +136,7 @@ Por fim é chamado a função alterar_audio() com todos os parâmetros obtidos a
    -   **except FileNotFoundError:** captura a exeção "FileNotFoundError", que pode ocorrer se o ficheiro de entrada especificado não for encontrado, nesse caso, chama a função "errorIO()" para mostrar o erro ao utilizador.
   
 
-**preview_audio:**
+6. **preview_audio:**
 
 A função preview_audio() tal como a função anterior realiza o processamento de áudio coletando parâmetros de entrada da GUI e invoca a função alterar_audio() com esses parâmetros. Esta função é executada quando o utilizador pressiona o botão de pré-visualizar o áudio, logo é criado um ficheiro temporário com as alterações introduzidas pelo utilizador e utiliza-se a função play() para tocar o áudio modificado, após isso o ficheiro criado é removido.
 
@@ -147,7 +147,7 @@ A função preview_audio() tal como a função anterior realiza o processamento 
 - **except FileNotFoundError:** captura a exeção "FileNotFoundError", que pode ocorrer se o ficheiro de entrada especificado não for encontrado, nesse caso, chama a função "errorIO()" para mostrar o erro ao utilizador.
 
 
-**errorIO:**
+7. **errorIO:**
 
 Esta função é um mecanismo simples de tratamento de erros para problemas relacionados à introdução de caminho de entrada e saída no programa, onde verifica se o caminho de entrada está vazio ou se existe no computador caso verifique um dos dois, exibe uma caixa de diálogo de mensagem de erro.
 
