@@ -50,6 +50,11 @@ O nosso programa recorre a várias bibliotecas para chegar ao seu estado final, 
 
 Este programa é constituído por várias funções, nelas são implementadas as alterações do áudio face as opções que o utilizador selecionar, como funções para alterar a velocidade e o tom, manipulação e reprodução de áudio, importação e exportação de áudio. A seguir é explicado como funciona cada uma das funções do nosso programa.
 
+
+
+
+
+
 1. **alterar_audio:**
 
 Esta função têm como função obter todos os parâmetros introduzidos pelo utilizador, desde caminho de entrada e saida do áudio, o valor de ajuste do tom, da velocidade, o tamanho da janela, a sobreposição e por fim o ambiente sonoro, depois realizar as alterações introduzidas pelo utilizado sobre o áudio original. Por fim cria um novo segmento de áudio modificado e faz a exportação para um caminho de sáida especificado.  
@@ -70,7 +75,8 @@ A função pitchshift() é onde é realizado a alteração do tom entre grave e 
    -   **stretched = stretch(snd_array, 1.0 / (factor * speed_factor), window_size, overlap):** chama a função stretch para ampliar a matriz de áudio de entrada. Isso envolve a manipulação do algoritmo para modificar a duração do áudio, preservando seu tom.
    -   **return speedx(stretched[window_size:], factor):** ajusta a velocidade do áudio esticado utilizando a função speedx() e o argumento "stretched[window_size:]" é utilizada para descartar as amostras iniciais, que podem ser afetadas durante o alongamento do áudio.
 
-**stretch:**
+
+3. **stretch:**
 
 
 A função stretch() realiza o alongamento do som introduzido pelo utilizador, onde primeiro divide o som em bits sobrepostos e reorganiza esses bits para que eles se sobreponham ainda mais (se quiser encurtar o som) ou menos (se quiser esticar o som), como nesta figura:
