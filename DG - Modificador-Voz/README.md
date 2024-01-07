@@ -66,13 +66,17 @@ Esta função têm como função obter todos os parâmetros introduzidos pelo ut
 
 A função pitchshift() é onde é realizado a alteração do tom entre grave e agudo do áudio introduzido pelo utilizador. A seguir poderá observar uma explicação mais detalhada acerca do funcionamento desta função. 
 
-   -   factor = 2**(1.0 * n / 12.0): Calcula o fator de mudança de afinação do tom com base no fator de afinação especificado (n) pelo utilizador. A fórmula converte o fator de altura de semitons em um fator multiplicativo usando a fórmula para proporções de frequência na teoria musical.
-   -   **stretched = stretch(snd_array, 1.0 / (factor * speed_factor), window_size, overlap):* chama a função stretch para ampliar a matriz de áudio de entrada. Isso envolve a manipulação do algoritmo do vocoder de fase para modificar a duração do áudio, preservando seu tom.
-   -   return speedx(stretched[window_size:], factor): ajusta ainda mais a velocidade do áudio esticado usando a speedxfunção. A stretched[window_size:]peça é utilizada para descartar as amostras iniciais, que podem ser afetadas por artefatos durante o alongamento.
-   A função combina operações de mudança de tom e mudança de velocidade para modificar a matriz de áudio de entrada com base no fator de tom, fator de velocidade, tamanho da janela e sobreposição especificados. Ele utiliza a stretchfunção de alongamento do tempo e a speedxfunção de ajuste de velocidade.
-
+   -   **factor = 2^(1.0 * n / 12.0):** Calcula o fator de mudança de afinação do tom com base no fator de afinação especificado (n) pelo utilizador. A fórmula converte o fator de altura de semitons em um fator multiplicativo usando a fórmula para proporções de frequência na teoria musical.
+   -   **stretched = stretch(snd_array, 1.0 / (factor * speed_factor), window_size, overlap):** chama a função stretch para ampliar a matriz de áudio de entrada. Isso envolve a manipulação do algoritmo para modificar a duração do áudio, preservando seu tom.
+   -   **return speedx(stretched[window_size:], factor):** ajusta a velocidade do áudio esticado utilizando a função speedx() e o argumento "stretched[window_size:]" é utilizada para descartar as amostras iniciais, que podem ser afetadas durante o alongamento do áudio.
 
 **stretch:**
+
+
+A função stretch() realiza o alongamento do som introduzido pelo utilizador, onde primeiro divide o som em bits sobrepostos e reorganiza esses bits para que eles se sobreponham ainda mais (se quiser encurtar o som) ou menos (se quiser esticar o som), como nesta figura:
+
+![stretchsound](https://github.com/Jofralso/PDS-3rd-year/assets/150937501/203fa7a2-0258-48ee-8b9e-bfd12de8eaad)
+
    -   sound_array: A matriz de áudio de entrada (matriz NumPy) que representa a onda sonora.
 f: O fator de estiramento, determinando quanto esticar ou comprimir o áudio no tempo.
 window_size: O tamanho da janela de análise usada para processar o áudio.
