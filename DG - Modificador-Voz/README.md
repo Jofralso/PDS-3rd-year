@@ -77,52 +77,64 @@ A função stretch() realiza o alongamento do som introduzido pelo utilizador, o
 
 ![stretchsound](https://github.com/Jofralso/PDS-3rd-year/assets/150937501/203fa7a2-0258-48ee-8b9e-bfd12de8eaad)
 
-   -   sound_array: A matriz de áudio de entrada (matriz NumPy) que representa a onda sonora.
-f: O fator de estiramento, determinando quanto esticar ou comprimir o áudio no tempo.
-window_size: O tamanho da janela de análise usada para processar o áudio.
-overlap: A quantidade de sobreposição entre janelas de análise consecutivas.
-   -   phase = np.zeros(window_size): inicializa um array para armazenar as informações da fase.
-hanning_window = np.hanning(window_size): Cria uma janela Hanning do tamanho especificado para análise.
-   -   Itera sobre a matriz de áudio de entrada com um tamanho de passo determinado pelo fator de estiramento e sobreposição. Extrai segmentos sobrepostos ( a1 e a2) da matriz de áudio de entrada. Aplica uma janela Hanning a cada segmento. Calcula a FFT (Fast Fourier Transform) dos segmentos em janela ( s1 e s2). Calcula a diferença de fase entre segmentos consecutivos e atualiza a matriz de fases.
-   -   Aplica as informações de fase para alterar a fase do segundo segmento ( a2_rephased). Acumula o segmento reformulado na matriz de resultados, ajustando a janela e a sobreposição.
-   -   Normaliza a matriz de resultados para garantir que o áudio permaneça dentro de um intervalo de amplitude especificado.
-   -   Converte a matriz de resultados em formato inteiro de 16 bits ( int16) para compatibilidade com formatos de arquivo de áudio.
-   -   Retorna o áudio estendido no tempo como uma matriz NumPy em formato inteiro de 16 bits.
-   A função implementa o algoritmo de codificador de fase para áudio com alongamento de tempo. Envolve transformada de Fourier, manipulação de fase e acumulação de segmentos refasados ​​para alcançar o efeito de alongamento de tempo desejado.
+Esta função é implementada com os seguintes argumentos:
+   -   **sound_array:** A matriz de áudio de entrada que representa a onda sonora.
+   -   **f:** O fator de estiramento, determinando quanto esticar ou comprimir o áudio no tempo.
+   -   **window_size:** O tamanho da janela de análise usada para processar o áudio.
+   -   **overlap:** A quantidade de sobreposição entre janelas de análise consecutivas.
 
+Dentro da função é executado várias operações como o algoritmo de codificador de fase para áudio com alongamento de tempo, envolve a transformada de Fourier, a manipulação de fase e acumulação de segmentos refasados ​​para alcançar o efeito de alongamento de tempo desejado.
+
+   -   **phase = np.zeros(window_size):** inicializa um array para armazenar as informações da fase.
+   -   **hanning_window = np.hanning(window_size):** Cria uma janela Hanning do tamanho especificado para análise, onde é usada para atenuar artefatos de borda no processo de estiramento temporal.
+
+Por fim normaliza a matriz de resultados para garantir que o áudio permaneça dentro de um intervalo de amplitude especificado, converte a matriz de resultados em formato inteiro de 16 bits (int16) para compatibilidade com formatos de arquivo de áudio e retorna o áudio estendido no tempo como uma matriz NumPy.
 
 **speedx:**
-   -   sound_array: A matriz de áudio de entrada (matriz NumPy) que representa a onda sonora.
-factor: O fator de velocidade, determinando quanto acelerar ou desacelerar o áudio.
-   -   np.arange(0, len(sound_array), factor): gera uma matriz de índices percorrendo a matriz de áudio original com um tamanho de passo determinado pelo fator de velocidade.
-np.round(...): arredonda os índices para o número inteiro mais próximo, pois os índices do array devem ser números inteiros.
-indices[indices < len(sound_array)].astype(int): filtra os índices que excedem o comprimento da matriz original e converte os índices restantes em números inteiros.
-   -   sound_array[indices.astype(int)]: usa os índices calculados para selecionar um subconjunto de amostras da matriz de áudio original. Esta operação efetivamente faz uma nova amostragem do áudio em uma taxa diferente com base no fator de velocidade.
-   -   Retorna a matriz de áudio reamostrada.
-   A função é um método simples, mas eficaz, para alterar a velocidade de reprodução de um array de áudio. Isso é conseguido selecionando um subconjunto de amostras da matriz original em intervalos determinados pelo fator de velocidade.
 
+   A função speedx() é utilizado para alterar a velocidade de reprodução de um array de áudio, isso é conseguido ao selecionar um subconjunto de amostras da matriz original em intervalos determinados pelo fator de velocidade. Tem como principais parametros:
+   
+   -   **sound_array:** A matriz de áudio de entrada que representa a onda sonora.
+   -   **factor:** O fator de velocidade, que determina o quanto acelerar ou desacelerar o áudio.
+
+Depois são executados os passos seguintes: 
+
+   -   **np.arange(0, len(sound_array), factor):** gera uma matriz de índices percorrendo a matriz de áudio original com um tamanho de passo determinado pelo fator de velocidade.
+   -   **np.round(...):** arredonda os índices para o número inteiro mais próximo, pois os índices do array devem ser números inteiros.
+   -   **sound_array[indices.astype(int)]:** usa os índices calculados para selecionar um subconjunto de amostras da matriz de áudio original. Faz uma nova amostragem do áudio em uma taxa diferente com base no fator de velocidade escolhido pelo utilizador e retorna a matriz de áudio modificado.
 
 **open_file:**
-   -   filedialog.askopenfilename(): abre uma caixa de diálogo que permite ao utilizador escolher um ficheiro. Esta função retorna o caminho do fiheiro selecionado.
-   -   entry_file_path.delete(0, tk.END): limpa o conteúdo do entry_file_pathwidget, que normalmente é um Entrywidget Tkinter usado para exibir o caminho do ficheiro selecionado.
-entry_file_path.insert(0, file_path): insere o caminho do ficheiro selecionado no entry_file_pathwidget na posição 0.
-   A função fornece uma maneira para o usuário escolher um ficheiro de áudio abrindo uma caixa de diálogo. Depois que um ficheiro é selecionado, ele atualiza um Entrywidget Tkinter com o caminho do ficheiro selecionado, tornando-o visível para o utilizador na GUI.
 
+Esta função é executada quando o utilizador clica no botão "procurar", fornece uma maneira de o utilizador escolher um ficheiro de áudio abrindo uma caixa de diálogo e depois que um ficheiro é selecionado, ele atualiza um Entrywidget Tkinter com o caminho do ficheiro selecionado, tornando-o visível para o utilizador na interface gráfica do programa.
+
+   -   **filedialog.askopenfilename():** abre uma caixa de diálogo que permite ao utilizador escolher um ficheiro, esta função retorna o caminho do fiheiro selecionado.
+   -   **entry_file_path.delete(0, tk.END):** limpa o conteúdo do entry_file_pathwidget, que normalmente é um Entrywidget Tkinter usado para exibir o caminho do ficheiro selecionado.
+   -   **entry_file_path.insert(0, file_path):** insere o caminho do ficheiro selecionado pelo utilizador no entry_file_pathwidget.
 
 **process_audio:**
-   -   filedialog.asksaveasfilename(defaultextension=".wav", filetypes=[("Arquivos WAV", "*.wav")]): abre uma caixa de diálogo para salvar o áudio processado. Ele solicita que o utilizador escolha um nome do fiheiro e o local com extensão padrão ".wav".
-   -   input_path = entry_file_path.get(): recupera o caminho do fiheiro de entrada do Entrywidget Tkinter chamado entry_file_path, que normalmente exibe o caminho do ficheiro de áudio selecionado.
-pitch_factor = float(entry_pitch.get()): recupera o fator de pitch do Scalewidget Tkinter chamado entry_pitch.
-speed_factor = float(entry_speed.get()): recupera o fator de velocidade do Scalewidget Tkinter chamado entry_speed.
-window_size_exp = int(entry_window_size_scale.get()): recupera o expoente do tamanho da janela do Scalewidget Tkinter chamado entry_window_size_scale.
-overlap_exp = int(entry_overlap_scale.get()): recupera o expoente de sobreposição do Scalewidget Tkinter chamado entry_overlap_scale.
-speed_slider_value = float(entry_speed.get()): recupera o fator de velocidade do Scalewidget Tkinter chamado entry_speed.
-   -   window_size = 2**window_size_exp: calcula o tamanho da janela com base no expoente recuperado da GUI.
-overlap = 2**overlap_exp: calcula a sobreposição com base no expoente recuperado da GUI.
-   -   alterar_audio(input_path, output_path, pitch_factor, speed_factor * speed_slider_value, window_size, overlap): chama a alterar_audiofunção com os parâmetros de entrada especificados. Ele realiza a modificação do áudio com base nas escolhas do usuário.
-   -   except FileNotFoundError:: captura uma FileNotFoundErrorexceção que pode ocorrer se o ficheiro de entrada especificado não for encontrado. Nesse caso, ele chama a errorIOfunção para tratar o erro.
-   A função orquestra o processamento de áudio coletando parâmetros de entrada da GUI, calculando o tamanho e a sobreposição da janela e, em seguida, invocando a alterar_audiofunção com esses parâmetros. Ele também lida com possíveis erros relacionados a ficheiros usando a FileNotFoundErrorexceção.
 
+ A função process_audio() realiza o processamento de áudio coletando parâmetros de entrada da GUI, calculando o tamanho e a sobreposição da janela e, em seguida, invocando a alterar_audio com esses parâmetros, também lida com possíveis erros relacionados a ficheiros usando a FileNotFoundError.
+
+   -   **filedialog.asksaveasfilename(defaultextension=".wav", filetypes=[("Arquivos WAV", "*.wav")]):** abre uma caixa de diálogo para salvar o áudio processado.
+
+Após selecionar o caminho para guardar ficheiro a função recupera todos os parâmetros relacionados com a modificação do som introduzidos pelo utilizador.
+
+-   **input_path = entry_file_path.get():** recupera o caminho do fiheiro de entrada.
+-   **pitch_factor = float(entry_pitch.get()):** recupera o fator de pitch.
+-   **speed_factor = float(entry_speed.get()):** recupera o fator de velocidade.
+-   **window_size_exp = int(entry_window_size_scale.get()):** recupera o valor do expoente do tamanho da janela.
+-   **overlap_exp = int(entry_overlap_scale.get()):** recupera o expoente do valor de sobreposição.
+-   **speed_slider_value = float(entry_speed.get()):** recupera o fator de velocidade.
+
+Depois é feito o calculo do tamanho da janela e a sobreposição do som com base no valor escolhido pelo utilizador.
+
+-   **window_size = 2^window_size_exp:** calcula o tamanho da janela.
+-   **overlap = 2^overlap_exp:** calcula a sobreposição.
+
+Por fim é chamado a função alterar_audio() com todos os parâmetros obtidos anteriomente.
+   -   **alterar_audio(input_path, output_path, pitch_factor, speed_factor * speed_slider_value, window_size, overlap):** Esta função realiza a modificação do áudio com base nas escolhas do utilizador.
+   -   **except FileNotFoundError:** captura a exeção "FileNotFoundError", que pode ocorrer se o ficheiro de entrada especificado não for encontrado, nesse caso, chama a função "errorIO()" para mostrar o erro ao utilizador.
+  
 
 **preview_audio:**
    -   input_path = entry_file_path.get(): recupera o caminho do ficheiro de entrada do Entrywidget Tkinter chamado entry_file_path.
