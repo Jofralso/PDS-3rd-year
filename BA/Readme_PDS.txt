@@ -75,8 +75,9 @@ Tudo isto é feito em tempo real, ou seja estamos constantemente a ouvir o que o
 ###  option2()
 ###  option3()
 ###  option4()
+###  option5()
 
-	Métodos usados no menu, onde são alteradas as frequências, o tipo de filtro, listados os dispositivos de entrada e saida de audio e é feito o fecho do programa.
+	Métodos usados no menu, onde são alteradas as frequências, o tipo de filtro, a ordem do filtro, listados os dispositivos de entrada e saida de audio e é feito o fecho do programa.
 ---------------------------------------------------------------------------------------------
 ###  corte1()
 ###  corte2()
